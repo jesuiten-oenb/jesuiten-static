@@ -683,6 +683,38 @@
                <place xml:id="jesuiten_place__88">
                   <placeName>Munkazinum</placeName>
                </place>
+               <place xml:id="jesuiten_place__89">
+                  <placeName>Sonderburg</placeName>
+                  <location type="coords">
+                     <geo>54.90896 9.78917</geo>
+                  </location>
+                  <idno type="geonames">https://sws.geonames.org/2613102/</idno>
+                  <idno type="wikidata">http://www.wikidata.org/entity/Q21179</idno>
+               </place>
+               <place xml:id="jesuiten_place__90">
+                  <placeName>Eisenerz</placeName>
+                  <location type="coords">
+                     <geo>47.53333 14.88333</geo>
+                  </location>
+                  <idno type="geonames">https://sws.geonames.org/2780207/</idno>
+                  <idno type="wikidata">http://www.wikidata.org/entity/Q284596</idno>
+               </place>
+               <place xml:id="jesuiten_place__91">
+                  <placeName>Zadar</placeName>
+                  <location type="coords">
+                     <geo>44.11578 15.22514</geo>
+                  </location>
+                  <idno type="geonames">https://sws.geonames.org/3186952/</idno>
+                  <idno type="wikidata">http://www.wikidata.org/entity/Q58146</idno>
+               </place>
+               <place xml:id="jesuiten_place__92">
+                  <placeName>Pašman</placeName>
+                  <location type="coords">
+                     <geo>43.95750 15.38500</geo>
+                  </location>
+                  <idno type="geonames">https://sws.geonames.org/3193599/</idno>
+                  <idno type="wikidata">http://www.wikidata.org/entity/Q579274</idno>
+               </place>
             </listPlace>
          </div>
       </body>
