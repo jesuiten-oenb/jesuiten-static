@@ -109,26 +109,18 @@
                                             <xsl:text>Library catalogue</xsl:text>
                                         </a>
                                     </xsl:when>
-                                </xsl:choose> 
-                                
-                               <!-- <a class="btn btn-outline-dark">
-                                    <xsl:attribute name="href">		
-                                        <xsl:variable name="full_path">
-                                            <xsl:value-of select="document-uri(/)"/>
-                                        </xsl:variable>
-                                        <xsl:value-of select="concat($gitData,replace(tokenize($full_path, '/')[last()], '.html', '.xml'))"/>
-                                    </xsl:attribute>
-                                    <xsl:text>Show TEI-XML</xsl:text>
-                                </a>  -->
+                                </xsl:choose>                                 
+                               
                             </div>
                             <div class="card-body"> 
                                 <h1><xsl:apply-templates select=".//tei:head/tei:title"></xsl:apply-templates></h1>
-                                <xsl:text>Paper. </xsl:text><xsl:apply-templates select=".//tei:extent/tei:measure"></xsl:apply-templates><xsl:text> (</xsl:text><xsl:apply-templates select=".//tei:dimensions/tei:height"></xsl:apply-templates><xsl:text>×</xsl:text><xsl:apply-templates select=".//tei:dimensions/tei:width"></xsl:apply-templates><xsl:text> mm) </xsl:text><xsl:apply-templates select=".//tei:heaed/origDate"></xsl:apply-templates><br/>
+                                <xsl:apply-templates select=".//tei:support"></xsl:apply-templates><xsl:text> </xsl:text><xsl:apply-templates select=".//tei:extent/tei:measure"></xsl:apply-templates><xsl:text> (</xsl:text><xsl:apply-templates select=".//tei:dimensions/tei:height"></xsl:apply-templates><xsl:text>×</xsl:text><xsl:apply-templates select=".//tei:dimensions/tei:width"></xsl:apply-templates><xsl:text> mm) </xsl:text><xsl:apply-templates select=".//tei:head/origDate"></xsl:apply-templates><br/>
                                 <xsl:apply-templates select=".//tei:foliation"></xsl:apply-templates><br/>
+                                <xsl:apply-templates select=".//tei:binding"></xsl:apply-templates><br/>
                                 <xsl:apply-templates select=".//tei:accMat"></xsl:apply-templates>
                                 <p><xsl:apply-templates select=".//tei:msContents"></xsl:apply-templates></p>
                                 
-                                <xsl:if test=".//tei:listOrg">
+                                <!--<xsl:if test=".//tei:listOrg">
                                     <xsl:text>Im Text erwähnte Körperschaften:</xsl:text>
                                     <ul>
                                        <xsl:for-each select=".//tei:org">
@@ -143,7 +135,7 @@
                                             <li><xsl:apply-templates select=".//tei:placeName"></xsl:apply-templates></li>
                                         </xsl:for-each> 
                                     </ul>
-                                </xsl:if>
+                                </xsl:if>-->
                             </div>
                             <!--<div class="card-footer">
                                 <p style="text-align:center;">
