@@ -70,6 +70,7 @@
                      <geo>48.30639 14.28611</geo>
                   </location>
                   <idno type="geonames">https://sws.geonames.org/2772400/</idno>
+                  <idno type="wikidata">http://www.wikidata.org/entity/Q41329</idno>
                </place>
                <place xml:id="jesuiten_place__4">
                   <placeName>Steyr</placeName>
@@ -87,7 +88,7 @@
                   <idno type="wikidata">http://www.wikidata.org/entity/Q1780</idno>
                </place>
                <place xml:id="jesuiten_place__6">
-                  <placeName>Trnava (Nagyszombat)</placeName>
+                  <placeName>Trnava</placeName>
                   <location type="coords">
                      <geo>48.37741 17.58723</geo>
                   </location>
@@ -107,6 +108,7 @@
                      <geo>47.68333 17.63512</geo>
                   </location>
                   <idno type="geonames">https://sws.geonames.org/3052009/</idno>
+                  <idno type="wikidata">http://www.wikidata.org/entity/Q134494</idno>
                <noteGrp><note target="cod_12123.xml" type="mentions">Beschreibung von  Cod. 12123</note></noteGrp></place>
                <place xml:id="jesuiten_place__9">
                   <placeName>Ljubljana</placeName>
@@ -114,6 +116,7 @@
                      <geo>46.05108 14.50513</geo>
                   </location>
                   <idno type="geonames">https://sws.geonames.org/3196359/</idno>
+                  <idno type="wikidata">http://www.wikidata.org/entity/Q437</idno>
                <noteGrp><note target="cod_12123.xml" type="mentions">Beschreibung von  Cod. 12123</note></noteGrp></place>
                <place xml:id="jesuiten_place__10">
                   <placeName>Zagreb</placeName>
@@ -129,6 +132,7 @@
                      <geo>48.40921 15.61415</geo>
                   </location>
                   <idno type="geonames">https://sws.geonames.org/2773549/</idno>
+                  <idno type="wikidata">http://www.wikidata.org/entity/Q131266</idno>
                <noteGrp><note target="cod_12123.xml" type="mentions">Beschreibung von  Cod. 12123</note></noteGrp></place>
                <place xml:id="jesuiten_place__12">
                   <placeName>Wiener Neustadt</placeName>
@@ -139,7 +143,7 @@
                   <idno type="wikidata">http://www.wikidata.org/entity/Q131612</idno>
                </place>
                <place xml:id="jesuiten_place__13">
-                  <placeName>Sopron (Ödenburg)</placeName>
+                  <placeName>Sopron</placeName>
                   <location type="coords">
                      <geo>47.68501 16.59049</geo>
                   </location>
@@ -194,7 +198,7 @@
                   <idno type="wikidata">http://www.wikidata.org/entity/Q144983</idno>
                <noteGrp><note target="cod_12123.xml" type="mentions">Beschreibung von  Cod. 12123</note></noteGrp></place>
                <place xml:id="jesuiten_place__20">
-                  <placeName>Levoča (Leutschau)</placeName>
+                  <placeName>Levoča</placeName>
                   <location type="coords">
                      <geo>49.02173 20.59212</geo>
                   </location>
@@ -230,6 +234,7 @@
                      <geo>47.37650 15.09144</geo>
                   </location>
                   <idno type="geonames">https://sws.geonames.org/2772649/</idno>
+                  <idno type="wikidata">http://www.wikidata.org/entity/Q485294</idno>
                <noteGrp><note target="cod_12123.xml" type="mentions">Beschreibung von  Cod. 12123</note></noteGrp></place>
                <place xml:id="jesuiten_place__25">
                   <placeName>Judenburg</placeName>
@@ -237,6 +242,7 @@
                      <geo>47.16667 14.66667</geo>
                   </location>
                   <idno type="geonames">https://sws.geonames.org/2775020/</idno>
+                  <idno type="wikidata">http://www.wikidata.org/entity/Q263107</idno>
                <noteGrp><note target="cod_12123.xml" type="mentions">Beschreibung von  Cod. 12123</note></noteGrp></place>
                <place xml:id="jesuiten_place__26">
                   <placeName>Klagenfurt</placeName>
@@ -244,6 +250,7 @@
                      <geo>46.62472 14.30528</geo>
                   </location>
                   <idno type="geonames">https://sws.geonames.org/2774326/</idno>
+                  <idno type="wikidata">http://www.wikidata.org/entity/Q41753</idno>
                <noteGrp><note target="cod_12123.xml" type="mentions">Beschreibung von  Cod. 12123</note></noteGrp></place>
                <place xml:id="jesuiten_place__27">
                   <placeName>Gorizia</placeName>
@@ -254,7 +261,7 @@
                   <idno type="wikidata">http://www.wikidata.org/entity/Q6596</idno>
                </place>
                <place xml:id="jesuiten_place__28">
-                  <placeName>Trieste (Tergestinum)</placeName>
+                  <placeName>Trieste</placeName>
                   <location type="coords">
                      <geo>45.64953 13.77678</geo>
                   </location>
@@ -262,7 +269,7 @@
                   <idno type="wikidata">http://www.wikidata.org/entity/Q546</idno>
                </place>
                <place xml:id="jesuiten_place__29">
-                  <placeName>Rijeka (Flumen / Fiume)</placeName>
+                  <placeName>Rijeka</placeName>
                   <location type="coords">
                      <geo>45.32673 14.44241</geo>
                   </location>
@@ -277,7 +284,7 @@
                   <idno type="geonames">https://sws.geonames.org/3188383/</idno>
                </place>
                <place xml:id="jesuiten_place__31">
-                  <placeName>Pécs (Quinque ecclesiae)</placeName>
+                  <placeName>Pécs</placeName>
                   <location type="coords">
                      <geo>46.07250 18.23083</geo>
                   </location>
@@ -307,7 +314,7 @@
                   <idno type="wikidata">http://www.wikidata.org/entity/Q3711</idno>
                </place>
                <place xml:id="jesuiten_place__35">
-                  <placeName>Timişoara (Freidorf / Josephstadt)</placeName>
+                  <placeName>Timişoara</placeName>
                   <location type="coords">
                      <geo>45.75372 21.22571</geo>
                   </location>
@@ -320,14 +327,6 @@
                      <geo>48.85550 16.04880</geo>
                   </location>
                   <idno type="geonames">https://sws.geonames.org/3061344/</idno>
-               </place>
-               <place xml:id="jesuiten_place__38">
-                  <placeName>Wroclaw (Breslau / Vratislavia)</placeName>
-                  <location type="coords">
-                     <geo>51.10000 17.03333</geo>
-                  </location>
-                  <idno type="geonames">https://sws.geonames.org/3081368/</idno>
-                  <idno type="wikidata">http://www.wikidata.org/entity/Q1799</idno>
                </place>
                <place xml:id="jesuiten_place__39">
                   <placeName>Šentjernej</placeName>
@@ -379,6 +378,7 @@
                      <geo>48.21563 18.60705</geo>
                   </location>
                   <idno type="geonames">https://sws.geonames.org/3059101/</idno>
+                  <idno type="wikidata">http://www.wikidata.org/entity/Q506693</idno>
                </place>
                <place xml:id="jesuiten_place__46">
                   <placeName>Zip</placeName>
@@ -395,11 +395,12 @@
                   <idno type="geonames">https://sws.geonames.org/3058210/</idno>
                </place>
                <place xml:id="jesuiten_place__48">
-                  <placeName>Humenné (Homonna)</placeName>
+                  <placeName>Humenné</placeName>
                   <location type="coords">
                      <geo>48.93707 21.91625</geo>
                   </location>
                   <idno type="geonames">https://sws.geonames.org/724627/</idno>
+                  <idno type="wikidata">http://www.wikidata.org/entity/Q502264</idno>
                </place>
                <place xml:id="jesuiten_place__49">
                   <placeName>Enzersdorf</placeName>
@@ -453,6 +454,7 @@
                   <location type="coords">
                      <geo>46.56689 16.45276</geo>
                   </location>
+                  <idno type="wikidata">http://www.wikidata.org/entity/Q15890</idno>
                </place>
                <place xml:id="jesuiten_place__57">
                   <placeName>Gyöngyös</placeName>
@@ -460,6 +462,7 @@
                      <geo>47.78257 19.92800</geo>
                   </location>
                   <idno type="geonames">https://sws.geonames.org/3052040/</idno>
+                  <idno type="wikidata">http://www.wikidata.org/entity/Q209983</idno>
                </place>
                <place xml:id="jesuiten_place__58">
                   <placeName>Satu Mare</placeName>
@@ -476,7 +479,7 @@
                   <idno type="geonames">https://sws.geonames.org/2760837/</idno>
                </place>
                <place xml:id="jesuiten_place__60">
-                  <placeName>Šurianky (Suranka)</placeName>
+                  <placeName>Šurianky</placeName>
                   <location type="coords">
                      <geo>48.42194 18.02305</geo>
                   </location>
@@ -504,6 +507,7 @@
                      <geo>46.87389 14.29167</geo>
                   </location>
                   <idno type="geonames">https://sws.geonames.org/2777237/</idno>
+                  <idno type="wikidata">http://www.wikidata.org/entity/Q662048</idno>
                </place>
                <place xml:id="jesuiten_place__64">
                   <placeName>Žireč</placeName>
@@ -546,7 +550,7 @@
                   <idno type="wikidata">http://www.wikidata.org/entity/Q186349</idno>
                </place>
                <place xml:id="jesuiten_place__72">
-                  <placeName>Prešov (Eperiesinum)</placeName>
+                  <placeName>Prešov</placeName>
                   <location type="coords">
                      <geo>48.99839 21.23393</geo>
                   </location>
@@ -866,7 +870,7 @@
                   </location>
                   <idno type="geonames">https://sws.geonames.org/3071677/</idno>
                   <idno type="wikidata">http://www.wikidata.org/entity/Q384403</idno>
-               </place>
+               <noteGrp><note target="cod_11960.xml" type="mentions">Beschreibung von  Cod. 11960</note></noteGrp></place>
                <place xml:id="jesuiten_place__113">
                   <placeName>Jindřichův Hradec</placeName>
                   <location type="coords">
@@ -971,11 +975,12 @@
                   <idno type="wikidata">http://www.wikidata.org/entity/Q329833</idno>
                </place>
                <place xml:id="jesuiten_place__126">
-                  <placeName>Chlumek (Luže)</placeName>
+                  <placeName>Košumberk (Luže)</placeName>
                   <location type="coords">
                      <geo>49.88948 16.03229</geo>
                   </location>
-                  <idno type="wikidata">http://www.wikidata.org/entity/Q58465310</idno>
+                  <idno type="geonames">https://sws.geonames.org/3073120/</idno>
+                  <idno type="wikidata">http://www.wikidata.org/entity/Q12031338</idno>
                </place>
                <place xml:id="jesuiten_place__127">
                   <placeName>Jelenia Góra</placeName>
@@ -1184,20 +1189,13 @@
                   <idno type="geonames">https://sws.geonames.org/3083271/</idno>
                   <idno type="wikidata">http://www.wikidata.org/entity/Q47554</idno>
                </place>
-               <place xml:id="jesuiten_place__154">
-                  <placeName>Brzesko</placeName>
-                  <location type="coords">
-                     <geo>49.96911 20.60606</geo>
-                  </location>
-                  <idno type="geonames">https://sws.geonames.org/775183/</idno>
-                  <idno type="wikidata">http://www.wikidata.org/entity/Q324884</idno>
-               </place>
                <place xml:id="jesuiten_place__155">
-                  <placeName>Kamieniec</placeName>
+                  <placeName>Kamianets-Podilskyi</placeName>
                   <location type="coords">
-                     <geo>52.16614 16.46164</geo>
+                     <geo>48.67882 26.58516</geo>
                   </location>
-                  <idno type="geonames">https://sws.geonames.org/3096797/</idno>
+                  <idno type="geonames">https://sws.geonames.org/706950/</idno>
+                  <idno type="wikidata">http://www.wikidata.org/entity/Q193965</idno>
                </place>
                <place xml:id="jesuiten_place__156">
                   <placeName>Krosno</placeName>
@@ -1216,11 +1214,12 @@
                   <idno type="wikidata">http://www.wikidata.org/entity/Q123511</idno>
                </place>
                <place xml:id="jesuiten_place__158">
-                  <placeName>Łucka</placeName>
+                  <placeName>Lutsk</placeName>
                   <location type="coords">
-                     <geo>51.43646 22.63578</geo>
+                     <geo>50.75932 25.34244</geo>
                   </location>
-                  <idno type="geonames">https://sws.geonames.org/765824/</idno>
+                  <idno type="geonames">https://sws.geonames.org/702569/</idno>
+                  <idno type="wikidata">http://www.wikidata.org/entity/Q7550</idno>
                </place>
                <place xml:id="jesuiten_place__159">
                   <placeName>Malbork</placeName>
@@ -1262,6 +1261,311 @@
                   <idno type="geonames">https://sws.geonames.org/3082704/</idno>
                   <idno type="wikidata">http://www.wikidata.org/entity/Q935744</idno>
                </place>
+               <place xml:id="jesuiten_place__164">
+                  <placeName>Moldavia</placeName>
+                  <idno type="wikidata">http://www.wikidata.org/entity/Q10957559</idno>
+               <noteGrp><note target="cod_12041.xml" type="mentions">Beschreibung von  Cod. 12041</note></noteGrp></place>
+               <place xml:id="jesuiten_place__165">
+                  <placeName>Celje</placeName>
+                  <location type="coords">
+                     <geo>46.23092 15.26044</geo>
+                  </location>
+                  <idno type="geonames">https://sws.geonames.org/3202781/</idno>
+                  <idno type="wikidata">http://www.wikidata.org/entity/Q1012</idno>
+               </place>
+               <place xml:id="jesuiten_place__166">
+                  <placeName>Muráň Castle</placeName>
+                  <location type="coords">
+                     <geo>48.74097 20.04961</geo>
+                  </location>
+                  <idno type="geonames">https://sws.geonames.org/724096/</idno>
+                  <idno type="wikidata">http://www.wikidata.org/entity/Q573241</idno>
+               </place>
+               <place xml:id="jesuiten_place__167">
+                  <placeName>Brest</placeName>
+                  <location type="coords">
+                     <geo>52.09755 23.68775</geo>
+                  </location>
+                  <idno type="geonames">https://sws.geonames.org/629634/</idno>
+                  <idno type="wikidata">http://www.wikidata.org/entity/Q140147</idno>
+               </place>
+               <place xml:id="jesuiten_place__168">
+                  <placeName>Římov (České Budějovice District)</placeName>
+                  <location type="coords">
+                     <geo>48.85561 14.48684</geo>
+                  </location>
+                  <idno type="geonames">https://sws.geonames.org/3066861/</idno>
+                  <idno type="wikidata">http://www.wikidata.org/entity/Q386944</idno>
+               </place>
+               <place xml:id="jesuiten_place__169">
+                  <placeName>Myslina</placeName>
+                  <location type="coords">
+                     <geo>48.94772 21.85543</geo>
+                  </location>
+                  <idno type="geonames">https://sws.geonames.org/724086/</idno>
+                  <idno type="wikidata">http://www.wikidata.org/entity/Q920744</idno>
+               </place>
+               <place xml:id="jesuiten_place__170">
+                  <placeName>Forchtenstein</placeName>
+                  <location type="coords">
+                     <geo>47.71161 16.34525</geo>
+                  </location>
+                  <idno type="geonames">https://sws.geonames.org/2779430/</idno>
+                  <idno type="wikidata">http://www.wikidata.org/entity/Q877030</idno>
+               </place>
+               <place xml:id="jesuiten_place__171">
+                  <placeName>Deutschkreutz</placeName>
+                  <location type="coords">
+                     <geo>47.60000 16.63333</geo>
+                  </location>
+                  <idno type="geonames">https://sws.geonames.org/2781024/</idno>
+                  <idno type="wikidata">http://www.wikidata.org/entity/Q41945</idno>
+               </place>
+               <place xml:id="jesuiten_place__172">
+                  <placeName>Transylvania</placeName>
+                  <location type="coords">
+                     <geo>46.50000 25.00000</geo>
+                  </location>
+                  <idno type="geonames">https://sws.geonames.org/664661/</idno>
+                  <idno type="wikidata">http://www.wikidata.org/entity/Q39473</idno>
+               </place>
+               <place xml:id="jesuiten_place__173">
+                  <placeName>Koppányszántó</placeName>
+                  <location type="coords">
+                     <geo>46.59472 18.10990</geo>
+                  </location>
+                  <idno type="geonames">https://sws.geonames.org/3049450/</idno>
+                  <idno type="wikidata">http://www.wikidata.org/entity/Q1072229</idno>
+               </place>
+               <place xml:id="jesuiten_place__174">
+                  <placeName>Kroatien</placeName>
+                  <location type="coords">
+                     <geo>45.16667 15.50000</geo>
+                  </location>
+                  <idno type="geonames">https://sws.geonames.org/3202326/</idno>
+               </place>
+               <place xml:id="jesuiten_place__175">
+                  <placeName>Slavonia</placeName>
+                  <location type="coords">
+                     <geo>45.45000 18.00000</geo>
+                  </location>
+                  <idno type="geonames">https://sws.geonames.org/3190590/</idno>
+               </place>
+               <place xml:id="jesuiten_place__176">
+                  <placeName>Krosno Odrzańskie</placeName>
+                  <location type="coords">
+                     <geo>52.05492 15.09882</geo>
+                  </location>
+                  <idno type="geonames">https://sws.geonames.org/3094633/</idno>
+                  <idno type="wikidata">https://de.wikipedia.org/wiki/Krosno_Odrza%C5%84skie</idno>
+               </place>
+               <place xml:id="jesuiten_place__177">
+                  <placeName>Karlovac</placeName>
+                  <location type="coords">
+                     <geo>45.49167 15.55000</geo>
+                  </location>
+                  <idno type="geonames">https://sws.geonames.org/3345300/</idno>
+                  <idno type="wikidata">http://www.wikidata.org/entity/Q3617</idno>
+               </place>
+               <place xml:id="jesuiten_place__178">
+                  <placeName>Kalnik</placeName>
+                  <location type="coords">
+                     <geo>46.12833 16.46250</geo>
+                  </location>
+                  <idno type="geonames">https://sws.geonames.org/3198440/</idno>
+                  <idno type="wikidata">http://www.wikidata.org/entity/Q1096087</idno>
+               </place>
+               <place xml:id="jesuiten_place__179">
+                  <placeName>Úštěk</placeName>
+                  <location type="coords">
+                     <geo>50.58474 14.34332</geo>
+                  </location>
+                  <idno type="geonames">https://sws.geonames.org/3063556/</idno>
+                  <idno type="wikidata">http://www.wikidata.org/entity/Q330717</idno>
+               </place>
+               <place xml:id="jesuiten_place__180">
+                  <placeName>Mělník</placeName>
+                  <location type="coords">
+                     <geo>50.35050 14.47411</geo>
+                  </location>
+                  <idno type="geonames">https://sws.geonames.org/3070862/</idno>
+                  <idno type="wikidata">http://www.wikidata.org/entity/Q320939</idno>
+               </place>
+               <place xml:id="jesuiten_place__183">
+                  <placeName>Polná</placeName>
+                  <location type="coords">
+                     <geo>49.48700 15.71881</geo>
+                  </location>
+                  <idno type="geonames">https://sws.geonames.org/3067870/</idno>
+                  <idno type="wikidata">http://www.wikidata.org/entity/Q158263</idno>
+               </place>
+               <place xml:id="jesuiten_place__184">
+                  <placeName>Přibyslav</placeName>
+                  <location type="coords">
+                     <geo>49.57684 15.73855</geo>
+                  </location>
+                  <idno type="geonames">https://sws.geonames.org/3067535/</idno>
+                  <idno type="wikidata">http://www.wikidata.org/entity/Q161060</idno>
+               </place>
+               <place xml:id="jesuiten_place__185">
+                  <placeName>Nížkov</placeName>
+                  <location type="coords">
+                     <geo>49.53256 15.80584</geo>
+                  </location>
+                  <idno type="geonames">https://sws.geonames.org/3069733/</idno>
+                  <idno type="wikidata">http://www.wikidata.org/entity/Q72692</idno>
+               </place>
+               <place xml:id="jesuiten_place__186">
+                  <placeName>Chlumec nad Cidlinou</placeName>
+                  <location type="coords">
+                     <geo>50.15440 15.46026</geo>
+                  </location>
+                  <idno type="geonames">https://sws.geonames.org/3077751/</idno>
+                  <idno type="wikidata">http://www.wikidata.org/entity/Q1013858</idno>
+               </place>
+               <place xml:id="jesuiten_place__187">
+                  <placeName>Netvořice</placeName>
+                  <location type="coords">
+                     <geo>49.81569 14.51827</geo>
+                  </location>
+                  <idno type="geonames">https://sws.geonames.org/3069796/</idno>
+                  <idno type="wikidata">http://www.wikidata.org/entity/Q2190166</idno>
+               </place>
+               <place xml:id="jesuiten_place__188">
+                  <placeName>Benešov</placeName>
+                  <location type="coords">
+                     <geo>49.78162 14.68697</geo>
+                  </location>
+                  <idno type="geonames">https://sws.geonames.org/3079508/</idno>
+                  <idno type="wikidata">http://www.wikidata.org/entity/Q470394</idno>
+               </place>
+               <place xml:id="jesuiten_place__189">
+                  <placeName>Lanškroun</placeName>
+                  <location type="coords">
+                     <geo>49.91217 16.61190</geo>
+                  </location>
+                  <idno type="geonames">https://sws.geonames.org/3072332/</idno>
+                  <idno type="wikidata">http://www.wikidata.org/entity/Q1000033</idno>
+               </place>
+               <place xml:id="jesuiten_place__190">
+                  <placeName>Lipník nad Bečvou</placeName>
+                  <location type="coords">
+                     <geo>49.52721 17.58594</geo>
+                  </location>
+                  <idno type="geonames">https://sws.geonames.org/3071791/</idno>
+                  <idno type="wikidata">http://www.wikidata.org/entity/Q1021080</idno>
+               </place>
+               <place xml:id="jesuiten_place__191">
+                  <placeName>Hranice na Moravě</placeName>
+                  <location type="coords">
+                     <geo>49.54796 17.73469</geo>
+                  </location>
+                  <idno type="geonames">https://sws.geonames.org/3074893/</idno>
+                  <idno type="wikidata">http://www.wikidata.org/entity/Q638306</idno>
+               </place>
+               <place xml:id="jesuiten_place__192">
+                  <placeName>Prostějov</placeName>
+                  <location type="coords">
+                     <geo>49.47188 17.11184</geo>
+                  </location>
+                  <idno type="geonames">https://sws.geonames.org/3067421/</idno>
+                  <idno type="wikidata">http://www.wikidata.org/entity/Q470445</idno>
+               </place>
+               <place xml:id="jesuiten_place__193">
+                  <placeName>Moravec</placeName>
+                  <location type="coords">
+                     <geo>49.44010 16.14331</geo>
+                  </location>
+                  <idno type="geonames">https://sws.geonames.org/3070350/</idno>
+                  <idno type="wikidata">http://www.wikidata.org/entity/Q72408</idno>
+               </place>
+               <place xml:id="jesuiten_place__194">
+                  <placeName>Sedlec</placeName>
+                  <location type="coords">
+                     <geo>50.45006 14.01629</geo>
+                  </location>
+                  <idno type="geonames">https://sws.geonames.org/3066314/</idno>
+               </place>
+               <place xml:id="jesuiten_place__195">
+                  <placeName>Litomyšl</placeName>
+                  <location type="coords">
+                     <geo>49.86809 16.31298</geo>
+                  </location>
+                  <idno type="geonames">https://sws.geonames.org/3071675/</idno>
+               <noteGrp><note target="cod_11960.xml" type="mentions">Beschreibung von  Cod. 11960</note></noteGrp></place>
+               <place xml:id="jesuiten_place__196">
+                  <placeName>Holešov</placeName>
+                  <location type="coords">
+                     <geo>49.33331 17.57832</geo>
+                  </location>
+                  <idno type="geonames">https://sws.geonames.org/3075606/</idno>
+                  <idno type="wikidata">http://www.wikidata.org/entity/Q961325</idno>
+               </place>
+               <place xml:id="jesuiten_place__197">
+                  <placeName>Brtnice</placeName>
+                  <location type="coords">
+                     <geo>49.30695 15.67642</geo>
+                  </location>
+                  <idno type="geonames">https://sws.geonames.org/3078561/</idno>
+               </place>
+               <place xml:id="jesuiten_place__198">
+                  <placeName>Hustopeče</placeName>
+                  <location type="coords">
+                     <geo>48.94085 16.73762</geo>
+                  </location>
+                  <idno type="geonames">https://sws.geonames.org/3074677/</idno>
+                  <idno type="wikidata">http://www.wikidata.org/entity/Q1023875</idno>
+               </place>
+               <place xml:id="jesuiten_place__199">
+                  <placeName>Sobotka</placeName>
+                  <location type="coords">
+                     <geo>50.46741 15.17619</geo>
+                  </location>
+                  <idno type="geonames">https://sws.geonames.org/3065626/</idno>
+                  <idno type="wikidata">http://www.wikidata.org/entity/Q1756917</idno>
+               </place>
+               <place xml:id="jesuiten_place__200">
+                  <placeName>Rakovník</placeName>
+                  <location type="coords">
+                     <geo>50.10370 13.73340</geo>
+                  </location>
+                  <idno type="geonames">https://sws.geonames.org/3067051/</idno>
+               <noteGrp><note target="cod_11960.xml" type="mentions">Beschreibung von  Cod. 11960</note></noteGrp></place>
+               <place xml:id="jesuiten_place__201">
+                  <placeName>Horažďovice</placeName>
+                  <location type="coords">
+                     <geo>49.32069 13.70100</geo>
+                  </location>
+                  <idno type="geonames">https://sws.geonames.org/3075522/</idno>
+               <noteGrp><note target="cod_11960.xml" type="mentions">Beschreibung von  Cod. 11960</note></noteGrp></place>
+               <place xml:id="jesuiten_place__202">
+                  <placeName>Třeboň</placeName>
+                  <location type="coords">
+                     <geo>49.00364 14.77065</geo>
+                  </location>
+                  <idno type="geonames">https://sws.geonames.org/3064079/</idno>
+               </place>
+               <place xml:id="jesuiten_place__203">
+                  <placeName>Lomnice nad Lužnicí</placeName>
+                  <location type="coords">
+                     <geo>49.08468 14.71727</geo>
+                  </location>
+                  <idno type="geonames">https://sws.geonames.org/3071607/</idno>
+               <noteGrp><note target="cod_11960.xml" type="mentions">Beschreibung von  Cod. 11960</note></noteGrp></place>
+               <place xml:id="jesuiten_place__204">
+                  <placeName>Soběslav</placeName>
+                  <location type="coords">
+                     <geo>49.25993 14.71861</geo>
+                  </location>
+                  <idno type="geonames">https://sws.geonames.org/3065644/</idno>
+               </place>
+               <place xml:id="jesuiten_place__205">
+                  <placeName>Bydžov</placeName>
+                  <location type="coords">
+                     <geo>50.25844 15.45233</geo>
+                  </location>
+                  <idno type="geonames">https://sws.geonames.org/3065276/</idno>
+               <noteGrp><note target="cod_11960.xml" type="mentions">Beschreibung von  Cod. 11960</note></noteGrp></place>
             </listPlace>
          </div>
       </body>
