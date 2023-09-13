@@ -116,12 +116,26 @@
                                 <h1><xsl:apply-templates select=".//tei:head/tei:title"></xsl:apply-templates></h1>
                                 <xsl:apply-templates select=".//tei:support"></xsl:apply-templates><xsl:text> </xsl:text><xsl:apply-templates select=".//tei:extent/tei:measure"></xsl:apply-templates><xsl:text> (</xsl:text><xsl:apply-templates select=".//tei:dimensions/tei:height"></xsl:apply-templates><xsl:text>×</xsl:text><xsl:apply-templates select=".//tei:dimensions/tei:width"></xsl:apply-templates><xsl:text> mm) </xsl:text><xsl:apply-templates select=".//tei:head/origDate"></xsl:apply-templates><br/>
                                 <xsl:apply-templates select=".//tei:foliation"></xsl:apply-templates><br/>
-                                <xsl:apply-templates select=".//tei:binding"></xsl:apply-templates><br/>
-                                <xsl:apply-templates select=".//tei:accMat"></xsl:apply-templates>
-                                <p><xsl:apply-templates select=".//tei:msContents"></xsl:apply-templates></p>
+                                <xsl:apply-templates select=".//tei:binding"></xsl:apply-templates>                                
+                                    <xsl:choose>
+                                        <xsl:when test=".//tei:accMat != ''">
+                                            <xsl:apply-templates select=".//tei:accMat"></xsl:apply-templates>
+                                        </xsl:when>
+                                    </xsl:choose>                                    
                                 
-                                <!--<xsl:if test=".//tei:listOrg">
-                                    <xsl:text>Im Text erwähnte Körperschaften:</xsl:text>
+                                <p><xsl:apply-templates select=".//tei:msContents/tei:summary/text()[normalize-space()]"></xsl:apply-templates></p>
+                                <xsl:if test=".//tei:msItem">
+                                    <xsl:for-each select=".//tei:msItem">                                        
+                                        <xsl:apply-templates select="./tei:locus"></xsl:apply-templates><xsl:text> </xsl:text>
+                                        <xsl:apply-templates select="./tei:title"></xsl:apply-templates>
+                                        <xsl:apply-templates select=".//tei:orgName"></xsl:apply-templates>
+                                        <xsl:apply-templates select=".//tei:placeName"></xsl:apply-templates>
+                                        <xsl:apply-templates select=".//tei:date"></xsl:apply-templates>
+                                        <br/>
+                                    </xsl:for-each>
+                                </xsl:if>
+                                <xsl:if test=".//tei:listOrg">
+                                    <xsl:apply-templates select=".//tei:listOrg/tei:head"/>
                                     <ul>
                                        <xsl:for-each select=".//tei:org">
                                            <li><xsl:apply-templates select=".//tei:orgName[not(@type='alt')]"></xsl:apply-templates></li>
@@ -129,13 +143,13 @@
                                     </ul>
                                 </xsl:if>
                                 <xsl:if test=".//tei:listPlace">
-                                    <xsl:text>Im Text erwähnte Orte:</xsl:text>
+                                    <xsl:apply-templates select=".//tei:listPlace/tei:head"/>
                                     <ul>
                                         <xsl:for-each select=".//tei:place">
                                             <li><xsl:apply-templates select=".//tei:placeName"></xsl:apply-templates></li>
                                         </xsl:for-each> 
                                     </ul>
-                                </xsl:if>-->
+                                </xsl:if>
                             </div>
                             <!--<div class="card-footer">
                                 <p style="text-align:center;">
