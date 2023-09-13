@@ -126,11 +126,11 @@
                                 <p><xsl:apply-templates select=".//tei:msContents/tei:summary/text()[normalize-space()]"></xsl:apply-templates></p>
                                 <xsl:if test=".//tei:msItem">
                                     <xsl:for-each select=".//tei:msItem">                                        
-                                        <xsl:apply-templates select="./tei:locus"></xsl:apply-templates><xsl:text> </xsl:text>
-                                        <xsl:apply-templates select="./tei:title"></xsl:apply-templates>
-                                        <xsl:apply-templates select=".//tei:orgName"></xsl:apply-templates>
-                                        <xsl:apply-templates select=".//tei:placeName"></xsl:apply-templates>
-                                        <xsl:apply-templates select=".//tei:date"></xsl:apply-templates>
+                                        <xsl:apply-templates select="./tei:locus"/><xsl:text> </xsl:text>
+                                        <xsl:apply-templates select="./tei:title"/>
+                                        <xsl:apply-templates select=".//tei:orgName"/>
+                                        <xsl:apply-templates select=".//tei:placeName"/>
+                                        <xsl:apply-templates select=".//tei:date"/>
                                         <br/>
                                     </xsl:for-each>
                                 </xsl:if>
@@ -200,5 +200,12 @@
         <div id="{local:makeId(.)}">
             <xsl:apply-templates/>
         </div>
-    </xsl:template>  
+    </xsl:template>
+    <xsl:variable name='site'>https://jesuiten-oenb.github.io/jesuiten-static/</xsl:variable>
+    <xsl:template match="tei:placeName">
+        <a href="{concat($site, replace(./@key, '#', ''), '.html')}"><xsl:apply-templates/></a>       
+    </xsl:template>
+    <xsl:template match="tei:orgName">
+        <a href="{concat($site, replace(./@key, '#', ''), '.html')}"><xsl:apply-templates/></a>       
+    </xsl:template>
 </xsl:stylesheet>
