@@ -1,9 +1,7 @@
 key,de,en,it
 navbar__project,Projekt,Project,Progetto
 navbar__about,Über das Projekt,About the project,Sul progetto
-navbar__toc,Editionseinheiten,Edition units,Unità di edizione
-navbar__nofacs,Ohne Faksimiles,Without facsimiles,Senza fax
-navbar__withfacs,Mit Faksimiles,With facsimiles,Con i fax
+navbar__toc,Handschriftenbeschreibungen,Manuscript Descriptions,Descrizioni manoscritte,
 navbar__register,Register,Register,Registrati
 navbar__persons,Personen,Person,Persone
 navbar__places,Orte,Places,Luoghi
