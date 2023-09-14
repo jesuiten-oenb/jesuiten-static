@@ -40,6 +40,7 @@
                                             <th scope="col">Lat</th>
                                             <th scope="col">Long</th>
                                             <th scope="col">ID</th>
+                                            <th scope="col">Erwähnungen</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -72,6 +73,9 @@
                                                         </xsl:attribute>
                                                         <xsl:value-of select="$id"/>
                                                     </a> 
+                                                </td>
+                                                <td>
+                                                    <xsl:value-of select="count(.//tei:note[@type='mentions'])"/>
                                                 </td>
                                             </tr>
                                         </xsl:for-each>
