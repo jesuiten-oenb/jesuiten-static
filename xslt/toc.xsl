@@ -26,14 +26,15 @@
                     <div class="container-fluid">
                         <div class="card">
                             <div class="card-header">
-                                <h1>Inhaltsverzeichnis</h1>
+                                <h1>Handschriftenbeschreibungen</h1>
                             </div>
                             <div class="card-body">
                                 <table class="table table-striped display" id="tocTable" style="width:100%">
                                     <thead>
                                         <tr>
+                                            <th scope="col">Signatur</th>
                                             <th scope="col">Titel</th>
-                                            <th scope="col">Dateinname</th>
+                                            <th scope="col">Jahr</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -47,12 +48,15 @@
                                                         <xsl:attribute name="href">                                                
                                                             <xsl:value-of select="replace(tokenize($full_path, '/')[last()], '.xml', '.html')"/>
                                                         </xsl:attribute>
-                                                        <xsl:value-of select=".//tei:title[@type='main'][1]/text()"/>
+                                                        <xsl:value-of select=".//tei:msIdentifier/tei:idno/text()"/>
                                                     </a>
                                                 </td>
                                                 <td>
-                                                    <xsl:value-of select="tokenize($full_path, '/')[last()]"/>
+                                                    <xsl:value-of select=".//tei:head/tei:title/text()"/>                                                    
                                                 </td>  
+                                                <td>
+                                                    <xsl:value-of select=".//tei:head/tei:origDate/text()"/>
+                                                </td>
                                             </tr>
                                         </xsl:for-each>
                                     </tbody>
