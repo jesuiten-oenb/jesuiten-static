@@ -10,7 +10,7 @@
     <xsl:import href="./partials/html_footer.xsl"/>
     <xsl:template match="/">
         <xsl:variable name="doc_title">
-            <xsl:value-of select='"Jesuiten Littera annuae"'/>
+            <xsl:value-of select='"Litterae annuae SJ"'/>
         </xsl:variable>
 
         <xsl:text disable-output-escaping='yes'>&lt;!DOCTYPE html&gt;</xsl:text>
@@ -39,41 +39,14 @@
                             </div>
                             <div class="col-md-6 col-lg-6 col-sm-12">
                                 <div class="intro_right wrapper">                                    
-                                    <img src="https://gallica.bnf.fr/ark:/12148/btv1b530412764/f1.item.mini" class="d-block w-100" alt="..."/>
+                                    <img src="images/karte.jpg" class="responsive" width="80%" alt="..."/>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="container-fluid" style="margin:2em auto;">
                         <div class="row wrapper img_bottom">
-                            <div class="col-md-6 col-lg-6 col-sm-12">
-                                <a href="toc.html" class="index-link">                                   
-                                    <div class="card index-card">
-                                        <div class="card-body">
-                                            <img src="images/example-img-1.jpg" class="d-block w-100" alt="..."/>
-                                        </div>
-                                        <div class="card-header">                                            
-                                            <p>
-                                                Vorlage für eine Edition ohne Faksimiles
-                                            </p>                                            
-                                        </div>
-                                    </div>                                     
-                                </a>                                    
-                            </div>
-                            <!--<div class="col-md-6 col-lg-6 col-sm-12">
-                                <a href="toc_facs.html" class="index-link">                                                     
-                                    <div class="card index-card">
-                                        <div class="card-body">
-                                            <img src="images/example-img-1.jpg" class="d-block w-100" alt="..."/>
-                                        </div>
-                                        <div class="card-header">                                            
-                                            <p>
-                                                Vorlage für eine Edition mit Faksimiles
-                                            </p>                                            
-                                        </div>
-                                    </div>                                 
-                                </a>
-                            </div>-->
+                           
                             <div class="col-md-6 col-lg-6 col-sm-12">
                                 <a href="about.html" class="index-link">  
                                     <div class="card index-card">
