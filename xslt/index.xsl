@@ -28,8 +28,8 @@
                         <div class="row intro">
                             <div class="col-md-6 col-lg-6 col-sm-12 wp-intro_left">
                                 <div class="intro_left">
-                                    <h1>Jesuiten Litterae annuae</h1>
-                                    <h3>Jesuiten Litterae annuae</h3>
+                                    <h1>Litterae Annuae Societatis Jesu</h1>
+                                    <h3>Jesuitische Jahresberichte aus der Handschriftensammlung der Österreichischen Nationalbibliothek</h3>
                                     <a href="toc.html" title="Handschriftenbeschreibungen">
                                         <button class="btn btn-secondary" role="button" style="width: 250px;">
                                             Zu den Handschriftenbeschreibungen
@@ -38,9 +38,8 @@
                                 </div>
                             </div>
                             <div class="col-md-6 col-lg-6 col-sm-12">
-                                <div class="intro_right wrapper">
-                                    <div style="display: block; "><iframe style="width:500px; height: 317.24709155285785px; border: 0;" src="https://gallica.bnf.fr/ark:/12148/btv1b530412764/f1.item.mini"></iframe></div>
-                                    <!--<img src="images/29117929_XXL_height.jpg" class="d-block w-100" alt="..."/>-->
+                                <div class="intro_right wrapper">                                    
+                                    <img src="https://gallica.bnf.fr/ark:/12148/btv1b530412764/f1.item.mini" class="d-block w-100" alt="..."/>
                                 </div>
                             </div>
                         </div>
