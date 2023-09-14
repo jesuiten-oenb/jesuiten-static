@@ -28,23 +28,19 @@
                         <div class="row intro">
                             <div class="col-md-6 col-lg-6 col-sm-12 wp-intro_left">
                                 <div class="intro_left">
-                                    <h1>Jesuiten Littera annuae</h1>
-                                    <h3>Jesuiten Littera annuae</h3>
-                                    <a href="toc.html" title="Edition ohne Faksimiles">
+                                    <h1>Jesuiten Litterae annuae</h1>
+                                    <h3>Jesuiten Litterae annuae</h3>
+                                    <a href="toc.html" title="Handschriftenbeschreibungen">
                                         <button class="btn btn-secondary" role="button" style="width: 250px;">
-                                            Edition ohne Faksimiles
+                                            Zu den Handschriftenbeschreibungen
                                         </button>
-                                    </a>
-                                    <a href="toc_facs.html" title="Edition mit Faksimiles">
-                                        <button class="btn btn-secondary" role="button" style="width: 250px;">
-                                            Edition mit Faksimiles
-                                        </button>
-                                    </a>
+                                    </a>                                    
                                 </div>
                             </div>
                             <div class="col-md-6 col-lg-6 col-sm-12">
                                 <div class="intro_right wrapper">
-                                    <img src="images/29117929_XXL_height.jpg" class="d-block w-100" alt="..."/>
+                                    <div style="display: block; "><iframe style="width:500px; height: 317.24709155285785px; border: 0;" src="https://gallica.bnf.fr/ark:/12148/btv1b530412764/f1.item.mini"></iframe></div>
+                                    <!--<img src="images/29117929_XXL_height.jpg" class="d-block w-100" alt="..."/>-->
                                 </div>
                             </div>
                         </div>
@@ -65,7 +61,7 @@
                                     </div>                                     
                                 </a>                                    
                             </div>
-                            <div class="col-md-6 col-lg-6 col-sm-12">
+                            <!--<div class="col-md-6 col-lg-6 col-sm-12">
                                 <a href="toc_facs.html" class="index-link">                                                     
                                     <div class="card index-card">
                                         <div class="card-body">
@@ -78,7 +74,7 @@
                                         </div>
                                     </div>                                 
                                 </a>
-                            </div>
+                            </div>-->
                             <div class="col-md-6 col-lg-6 col-sm-12">
                                 <a href="about.html" class="index-link">  
                                     <div class="card index-card">
