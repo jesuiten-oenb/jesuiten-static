@@ -35,8 +35,10 @@
                                 <table class="table table-striped display" id="tocTable" style="width:100%">
                                     <thead>
                                         <tr>
-                                            <th scope="col">Name</th>
                                             <th scope="col">ID</th>
+                                            <th scope="col">Name</th>
+                                            <th scope="col">Latin name</th>
+                                            <th scope="col">Location</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -46,15 +48,21 @@
                                             </xsl:variable>
                                             <tr>
                                                 <td>
-                                                    <xsl:value-of select=".//tei:orgName[1]/text()"/>
-                                                </td>
-                                                <td>
                                                     <a>
                                                         <xsl:attribute name="href">
                                                             <xsl:value-of select="concat($id, '.html')"/>
                                                         </xsl:attribute>
                                                         <xsl:value-of select="$id"/>
                                                     </a> 
+                                                </td>
+                                                <td>
+                                                    <xsl:value-of select=".//tei:orgName[1]/text()"/>
+                                                </td>
+                                                <td>
+                                                    <xsl:value-of select=".//tei:orgName[@type='alt']/text()"/>
+                                                </td>
+                                                <td>
+                                                    <xsl:value-of select=".//tei:location/tei:placeName/text()"/>
                                                 </td>
                                             </tr>
                                         </xsl:for-each>
