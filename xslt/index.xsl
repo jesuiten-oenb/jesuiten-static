@@ -44,39 +44,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="container-fluid" style="margin:2em auto;">
-                        <div class="row wrapper img_bottom">
-                           
-                            <div class="col-md-6 col-lg-6 col-sm-12">
-                                <a href="about.html" class="index-link">  
-                                    <div class="card index-card">
-                                        <div class="card-body">
-                                            <img src="images/example-img-1.jpg" class="d-block w-100" alt="..."/>
-                                        </div>
-                                        <div class="card-header">                                            
-                                            <p>
-                                                Über das Projekt
-                                            </p>                                            
-                                        </div>
-                                    </div>                                    
-                                </a>
-                            </div>
-                            <div class="col-md-6 col-lg-6 col-sm-12">
-                                <a href="search.html" class="index-link">  
-                                    <div class="card index-card">
-                                        <div class="card-body">
-                                            <img src="images/example-img-1.jpg" class="d-block w-100" alt="..."/>
-                                        </div>
-                                        <div class="card-header">                                            
-                                            <p>
-                                                Datenbanksuche
-                                            </p>                                            
-                                        </div>
-                                    </div>                                    
-                                </a>
-                            </div>
-                        </div>
-                    </div>
+                    
                     <xsl:call-template name="html_footer"/>
                 </div>
             </body>

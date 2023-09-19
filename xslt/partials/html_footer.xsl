@@ -8,7 +8,7 @@
     <xsl:template match="/" name="html_footer">
         
         <div class="wrapper hide-reading" id="wrapper-footer-full">
-            <div class="container-fluid" id="footer-full-content" tabindex="-1">
+            <!--<div class="container-fluid" id="footer-full-content" tabindex="-1">
                 <div class="footer-separator">
                     KONTAKT
                 </div>
@@ -18,7 +18,7 @@
                             <a href="/"><img src="https://fundament.acdh.oeaw.ac.at/common-assets/images/acdh_logo.svg" class="image" alt="ACDH Logo" style="max-width: 100%; height: auto;" title="ACDH Logo"/></a>
                         </div>
                     </div>
-                    <!-- .footer-widget -->
+                    <!-\- .footer-widget -\->
                     <div class="footer-widget col-lg-4 col-md-3 col-sm-3">
                         <div class="textwidget custom-html-widget">
                             <p>
@@ -47,23 +47,23 @@
                                 <div class="col-lg-6 col-md-6 col-sm-12">
                                     <div class="flex-md-row mb-4 align-items-center">
                                         <a href="https://www.fwf.ac.at/en/"><img class="card-img-right flex-auto d-md-block" src="https://www.fwf.ac.at/fileadmin/files/Images/News_Presse/Presse/Logo/fwf-logo_var2.jpg" alt="FWF Der Wissenschaftsfond Logo" style="max-width: 140px; height: auto; margin-top:1em;" title="FWF Der Wissenschaftsfond" /></a>
-                                        <!--<div class="card-body d-flex flex-column align-items-start">
+                                        <!-\-<div class="card-body d-flex flex-column align-items-start">
                                             <p class="card-text mb-auto">Project partner</p>
-                                        </div>-->
+                                        </div>-\->
                                     </div>
                                 </div>
                                 <div class="col-lg-6 col-md-6 col-sm-12">
                                     <div class="flex-md-row mb-4 align-items-center">
                                         <a href="https://www.univie.ac.at/en/"><img class="card-img-right flex-auto d-md-block" src="https://communications.univie.ac.at/fileadmin/user_upload/d_oeffentlichkeitsarbeit/Logos/2016-02/Uni_Logo_2016.jpg" alt="Universität Wien Logo" style="max-width: 160px; height: auto; vertical-align: middle;" title="Universität Wien" /></a>
-                                        <!--<div class="card-body d-flex flex-column align-items-start">
+                                        <!-\-<div class="card-body d-flex flex-column align-items-start">
                                             <p class="card-text mb-auto">Project partner</p>
-                                        </div>-->
+                                        </div>-\->
                                     </div>
                                 </div>                                
                             </div>
                         </div>
                     </div>
-                    <!-- .footer-widget -->                       
+                    <!-\- .footer-widget -\->                       
                     <div class="footer-widget col-lg-3 col-md-4 col-sm-3 ml-auto">
                         <div class="row">
                             <div class="textwidget custom-html-widget">
@@ -89,13 +89,13 @@
                             </div>
                         </div>
                     </div>
-                    <!-- .footer-widget -->
+                    <!-\- .footer-widget -\->
                 </div>
-            </div>
+            </div>-->
         </div>
         <!-- #wrapper-footer-full -->
         <div class="footer-imprint-bar text-light hide-reading" id="wrapper-footer-secondary" style="text-align:center; padding:0.4rem 0; font-size: 0.9rem;background-color:#00122f;" >
-            © Copyright OEAW | <a href="https://www.oeaw.ac.at/oeaw/impressum">Impressum/Imprint</a>
+           <!-- © Copyright OEAW | <a href="https://www.oeaw.ac.at/oeaw/impressum">Impressum/Imprint</a>-->
         </div>
         <script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
