@@ -62,7 +62,13 @@
                                                     <xsl:value-of select=".//tei:orgName[@type='alt']/text()"/>
                                                 </td>
                                                 <td>
-                                                    <xsl:value-of select=".//tei:location/tei:placeName/text()"/>
+                                                    <a>
+                                                        <xsl:attribute name="href">
+                                                            <xsl:value-of select="./tei:location[1]/tei:placeName[1]/@key||'.html'"/>
+                                                        </xsl:attribute>
+                                                        <xsl:value-of select=".//tei:location/tei:placeName/text()"/>
+                                                    </a>
+                                                    
                                                 </td>
                                             </tr>
                                         </xsl:for-each>

@@ -25,7 +25,22 @@
                             </scenarioAssociation>
                             <scenarioAssociation>
                                 <field name="url">
-                                    <String>html/about.xml</String>
+                                    <String>data/indices/listplace.xml</String>
+                                </field>
+                                <field name="scenarioIds">
+                                    <list>
+                                        <String>listplace</String>
+                                    </list>
+                                </field>
+                                <field name="scenarioTypes">
+                                    <list>
+                                        <String>XSL</String>
+                                    </list>
+                                </field>
+                            </scenarioAssociation>
+                            <scenarioAssociation>
+                                <field name="url">
+                                    <String>data/meta/about.xml</String>
                                 </field>
                                 <field name="scenarioIds">
                                     <list>
@@ -40,7 +55,7 @@
                             </scenarioAssociation>
                             <scenarioAssociation>
                                 <field name="url">
-                                    <String>data/indices/listplace.xml</String>
+                                    <String>html/about.xml</String>
                                 </field>
                                 <field name="scenarioIds">
                                     <list>
@@ -90,21 +105,6 @@
                                 <field name="scenarioIds">
                                     <list>
                                         <String>editions</String>
-                                    </list>
-                                </field>
-                                <field name="scenarioTypes">
-                                    <list>
-                                        <String>XSL</String>
-                                    </list>
-                                </field>
-                            </scenarioAssociation>
-                            <scenarioAssociation>
-                                <field name="url">
-                                    <String>data/meta/about.xml</String>
-                                </field>
-                                <field name="scenarioIds">
-                                    <list>
-                                        <String>index</String>
                                     </list>
                                 </field>
                                 <field name="scenarioTypes">
@@ -349,10 +349,10 @@
                                     <Boolean>true</Boolean>
                                 </field>
                                 <field name="outputFile">
-                                    <File>${cfne}.html</File>
+                                    <File>${pd}/html/${cfn}.html</File>
                                 </field>
                                 <field name="outputResource">
-                                    <String>${cfne}.html</String>
+                                    <String>${pd}/html/${cfn}.html</String>
                                 </field>
                                 <field name="openOtherLocationInBrowser">
                                     <Boolean>false</Boolean>
@@ -367,7 +367,7 @@
                                     <Boolean>false</Boolean>
                                 </field>
                                 <field name="showInXMLPane">
-                                    <Boolean>true</Boolean>
+                                    <Boolean>false</Boolean>
                                 </field>
                                 <field name="showInSVGPane">
                                     <Boolean>false</Boolean>
@@ -414,7 +414,7 @@
                                     <String></String>
                                 </field>
                                 <field name="inputXSLURL">
-                                    <String>file:/C:/Users/ivana/Documents/jesuiten-static/xslt/index.xsl</String>
+                                    <String>${pdu}/xslt/index.xsl</String>
                                 </field>
                                 <field name="inputXMLURL">
                                     <String>${currentFileURL}</String>
