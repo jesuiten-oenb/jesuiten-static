@@ -1,4 +1,4 @@
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="cod_12094.xml" xml:base="https://oenb.ac.at" prev="https://oenb.ac.at/cod_12093.xml" next="https://oenb.ac.at/cod_12123.xml">
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="cod_12094.xml" xml:base="https://oenb.ac.at" prev="https://oenb.ac.at/cod_12093.xml" next="https://oenb.ac.at/cod_12098.xml">
     <teiHeader>
         <fileDesc>
             <titleStmt>
@@ -27,10 +27,13 @@
                         <idno>Cod. 12094</idno>
                     </msIdentifier>
                     <head>
-                        <title/>
+                        <title>Litterae annuae provinciae Austriae Societatis Iesu a. 1698</title>
                         <origDate notBefore="1699-01-01">1699–1701</origDate>
+                        <note type="facs">
+                            <ref target="http://data.onb.ac.at/dtl/9129388"/>
+                        </note>
                         <note type="catalogue">
-                            <ref target=""/>
+                            <ref target="http://data.onb.ac.at/rec/AC13947454"/>
                         </note>
                     </head>
                     <msContents>                   
