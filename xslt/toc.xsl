@@ -34,7 +34,8 @@
                                         <tr>
                                             <th scope="col">Signatur</th>
                                             <th scope="col">Titel</th>
-                                            <th scope="col">Jahr</th>
+                                            <th scope="col">Für das Jahr</th>
+                                            <th scope="col">Umfang</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -55,7 +56,14 @@
                                                     <xsl:value-of select=".//tei:head/tei:title/text()"/>                                                    
                                                 </td>  
                                                 <td>
-                                                    <xsl:value-of select=".//tei:head/tei:origDate/text()"/>
+                                                    <xsl:value-of select=".//tei:head/tei:date/text()"/>
+                                                </td>
+                                                <td>
+                                                    <xsl:analyze-string select='.//tei:extent/tei:measure' regex='\d+'>
+                                                        <xsl:matching-substring>
+                                                            <number><xsl:value-of select='.' /></number>
+                                                        </xsl:matching-substring>
+                                                    </xsl:analyze-string>
                                                 </td>
                                             </tr>
                                         </xsl:for-each>
