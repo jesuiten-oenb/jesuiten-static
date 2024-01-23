@@ -45,6 +45,27 @@
                         display: none !important;
                     }
                 </style>
+                <style>
+                    /* Add some basic styling for the collapsible list */
+                    .collapsible {
+                    list-style-type: none;
+                    cursor: pointer;
+                    }
+                    .content {
+                    display: none;
+                    }
+                </style>
+                <!-- Include JavaScript for the collapsible behavior -->
+                <script>
+                    function toggleList(id) {
+                    var content = document.getElementById(id);
+                    if (content.style.display === "none") {
+                    content.style.display = "block";
+                    } else {
+                    content.style.display = "none";
+                    }
+                    }
+                </script>
             </head>
             <body class="page">
                 <div class="hfeed site" id="page">
@@ -130,18 +151,29 @@
                                         <xsl:apply-templates select="./tei:title"/>
                                         <xsl:apply-templates select=".//tei:orgName"/>
                                         <xsl:apply-templates select=".//tei:placeName"/>
-                                        <xsl:apply-templates select=".//tei:date"/>
+                                        <xsl:if test=".//tei:date">
+                                            <xsl:text> (a. </xsl:text><xsl:apply-templates select=".//tei:date"/><xsl:text>)</xsl:text>
+                                        </xsl:if>
                                         <br/>
                                     </xsl:for-each>
                                 </xsl:if>
                                 <xsl:if test=".//tei:listOrg">
+                                    
                                     <xsl:apply-templates select=".//tei:listOrg/tei:head"/>
-                                    <ul>
-                                       <xsl:for-each select=".//tei:org">
-                                           <li><xsl:apply-templates select=".//tei:orgName[not(@type='alt')]"></xsl:apply-templates></li>
-                                       </xsl:for-each> 
+                                    <ul class="collapsible" onclick="toggleList('orgList')">
+                                        <li>Im Text erwähnte Körperschaften:</li>
+                                        <ul class="content" id="orgList">
+                                            <!-- Use the xsl:for-each-group as previously explained -->
+                                            <xsl:for-each-group select=".//tei:org" group-by=".//tei:orgName[not(@type='alt')]">
+                                                <li>
+                                                    <xsl:apply-templates select="current-group()[1]//tei:orgName[not(@type='alt')]"/>
+                                                </li>
+                                            </xsl:for-each-group>
+                                        </ul>
                                     </ul>
                                 </xsl:if>
+                                
+                                
                                 <xsl:if test=".//tei:listPlace">
                                     <xsl:apply-templates select=".//tei:listPlace/tei:head"/>
                                     <ul>
