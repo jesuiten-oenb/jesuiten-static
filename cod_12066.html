@@ -41,7 +41,25 @@
                         display: none !important;
                     }
                 </style>
-   </head>
+      <style>
+                    /* Add some basic styling for the collapsible list */
+                    .collapsible {
+                    list-style-type: none;
+                    cursor: pointer;
+                    }
+                    .content {
+                    display: none;
+                    }
+                </style><script>
+                    function toggleList(id) {
+                    var content = document.getElementById(id);
+                    if (content.style.display === "none") {
+                    content.style.display = "block";
+                    } else {
+                    content.style.display = "none";
+                    }
+                    }
+                </script></head>
    <body class="page">
       <div class="hfeed site" id="page">
          <div class="wrapper-fluid wrapper-navbar sticky-top hide-reading" id="wrapper-navbar"><a class="skip-link screen-reader-text sr-only" href="#content">Skip to content</a><nav class="navbar navbar-expand-lg">
@@ -128,19 +146,16 @@
                      
                      </p>1-4 Personarum numerus et distributio <br />4-33 Privatae Missiones et stattarum propria <br />33-48 Conversationsi cum proximo fructus a variis erroribus abductio <br />48-58 Conversationis fructus alter aegrorum et egenorum cura <br />58-63 Tertius religiosae conuersationis fructus; odiorum extinctio <br />63-68 Quartus religiosae conversationis fructus vitiorum correctio et virtutum persuasum
                   studium <br />68-72 Sacra concio <br />72-74 Catechisis sacra <br />74-81 Sacramentorum paenitentia et eucharistiae usurpatio <br />81-83 Sodalitas externorum utrisque sexus <br />83-86 Sodalitas virorum externorum <br />86-91 Sodalitas scholarium <br />91-97 Scholae <br />97-99 Religiosi facti et ad clericatum euecti <br />99-100 Exercitia sancti patris Ignatii <br />101-107 Numinis et coelitum cultus publice curatus <br />107-109 Beatis virginis Mariae cultus <br />109-110 Sanctae Annae cultus promotus <br />110-111 Sanctis Josephi cultus promotus <br />111-132 Cultus sanctorum Ignatii et Xaverii curatus et promotus <br />132-142 Rei temporalis et domiciliorum augmenta et benefici <br />142-145 Benevoli et erga illos ac beneficos gratitudo <br />145-146 Adversa <br />146-162 Elogua defunctorum <br />Erwähnte Körperschaften:
-                  <ul>
-                     <li><a href="https://jesuiten-oenb.github.io/jesuiten-static/jesuiten_org__1.html">Profeßhaus Wien</a></li>
-                     <li><a href="https://jesuiten-oenb.github.io/jesuiten-static/jesuiten_org__4.html">Probationshaus Wien</a></li>
-                     <li><a href="https://jesuiten-oenb.github.io/jesuiten-static/jesuiten_org__10.html">Jesuitenkolleg Passau</a></li>
-                     <li><a href="https://jesuiten-oenb.github.io/jesuiten-static/jesuiten_org__61.html">Jesuitenmission Skalica</a></li>
-                     <li><a href="https://jesuiten-oenb.github.io/jesuiten-static/jesuiten_org__62.html">Jesuitenresidenz Spiš</a></li>
-                     <li><a href="https://jesuiten-oenb.github.io/jesuiten-static/jesuiten_org__64.html">Jesuitenresidenz Kláštor pod Znievom</a></li>
-                     <li><a href="https://jesuiten-oenb.github.io/jesuiten-static/.html">Jesuitenresidenz Spiš</a></li>
-                     <li><a href="https://jesuiten-oenb.github.io/jesuiten-static/.html">Jesuitenresidenz Kláštor pod Znievom</a></li>
-                     <li><a href="https://jesuiten-oenb.github.io/jesuiten-static/.html">Jesuitenmission Skalica</a></li>
-                     <li><a href="https://jesuiten-oenb.github.io/jesuiten-static/.html">Probationshaus Wien</a></li>
-                     <li><a href="https://jesuiten-oenb.github.io/jesuiten-static/.html">Profeßhaus Wien</a></li>
-                     <li><a href="https://jesuiten-oenb.github.io/jesuiten-static/.html">Jesuitenkolleg Passau</a></li>
+                  <ul class="collapsible" onclick="toggleList('orgList')">
+                     <li>Im Text erwähnte Körperschaften:</li>
+                     <ul class="content" id="orgList">
+                        <li><a href="https://jesuiten-oenb.github.io/jesuiten-static/jesuiten_org__1.html">Profeßhaus Wien</a></li>
+                        <li><a href="https://jesuiten-oenb.github.io/jesuiten-static/jesuiten_org__4.html">Probationshaus Wien</a></li>
+                        <li><a href="https://jesuiten-oenb.github.io/jesuiten-static/jesuiten_org__10.html">Jesuitenkolleg Passau</a></li>
+                        <li><a href="https://jesuiten-oenb.github.io/jesuiten-static/jesuiten_org__61.html">Jesuitenmission Skalica</a></li>
+                        <li><a href="https://jesuiten-oenb.github.io/jesuiten-static/jesuiten_org__62.html">Jesuitenresidenz Spiš</a></li>
+                        <li><a href="https://jesuiten-oenb.github.io/jesuiten-static/jesuiten_org__64.html">Jesuitenresidenz Kláštor pod Znievom</a></li>
+                     </ul>
                   </ul>Erwähnte Orte:
                   <ul>
                      <li><a href="https://jesuiten-oenb.github.io/jesuiten-static/jesuiten_place__1.html">Wien</a></li>

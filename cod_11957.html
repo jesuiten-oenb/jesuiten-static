@@ -41,7 +41,25 @@
                         display: none !important;
                     }
                 </style>
-   </head>
+      <style>
+                    /* Add some basic styling for the collapsible list */
+                    .collapsible {
+                    list-style-type: none;
+                    cursor: pointer;
+                    }
+                    .content {
+                    display: none;
+                    }
+                </style><script>
+                    function toggleList(id) {
+                    var content = document.getElementById(id);
+                    if (content.style.display === "none") {
+                    content.style.display = "block";
+                    } else {
+                    content.style.display = "none";
+                    }
+                    }
+                </script></head>
    <body class="page">
       <div class="hfeed site" id="page">
          <div class="wrapper-fluid wrapper-navbar sticky-top hide-reading" id="wrapper-navbar"><a class="skip-link screen-reader-text sr-only" href="#content">Skip to content</a><nav class="navbar navbar-expand-lg">
@@ -126,9 +144,11 @@
                      Deutsch, Tschechisch. 
                      
                      </p>2r-16v Quatuor votorum professi (1593-1773) <br />35r-35r Trium votorum professi (leer) <br />47r-54r Coadiutores spirituales formati (1595-1721) <br />67r-77v Coadiutores temporales formati (1590-1773) <br />89r-162v Scholastici approbati (1596-1772) <br />249r-294r Coadiutores temporales non formati (1596-1771) <br />Erwähnte Körperschaften:
-                  <ul>
-                     <li><a href="https://jesuiten-oenb.github.io/jesuiten-static/jesuiten_org__160.html">Probationshaus Brno</a></li>
-                     <li><a href="https://jesuiten-oenb.github.io/jesuiten-static/.html">Probationshaus Brno</a></li>
+                  <ul class="collapsible" onclick="toggleList('orgList')">
+                     <li>Im Text erwähnte Körperschaften:</li>
+                     <ul class="content" id="orgList">
+                        <li><a href="https://jesuiten-oenb.github.io/jesuiten-static/jesuiten_org__160.html">Probationshaus Brno</a></li>
+                     </ul>
                   </ul>Erwähnte Orte:
                   <ul>
                      <li><a href="https://jesuiten-oenb.github.io/jesuiten-static/jesuiten_place__94.html">Brno</a></li>

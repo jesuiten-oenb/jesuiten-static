@@ -41,7 +41,25 @@
                         display: none !important;
                     }
                 </style>
-   </head>
+      <style>
+                    /* Add some basic styling for the collapsible list */
+                    .collapsible {
+                    list-style-type: none;
+                    cursor: pointer;
+                    }
+                    .content {
+                    display: none;
+                    }
+                </style><script>
+                    function toggleList(id) {
+                    var content = document.getElementById(id);
+                    if (content.style.display === "none") {
+                    content.style.display = "block";
+                    } else {
+                    content.style.display = "none";
+                    }
+                    }
+                </script></head>
    <body class="page">
       <div class="hfeed site" id="page">
          <div class="wrapper-fluid wrapper-navbar sticky-top hide-reading" id="wrapper-navbar"><a class="skip-link screen-reader-text sr-only" href="#content">Skip to content</a><nav class="navbar navbar-expand-lg">
@@ -124,15 +142,14 @@
                      gegliedert. 
                      
                      </p>1-2 Numerus personarum <br />3-12 Conciones et catecheses <br />13-19 Sanctissima paenitentiae et eucharistiae sacramenta <br />20-27 Emolumenta religiosi cum proximo congressus <br />28-33 Charitas proximo impensa <br />33-48 Infidelium ad orthodoxam veritatem reductio <br />49-106 Missione sacrae <br />107-130 Principes ecclesiaerum festivitates sacraeque synthesis augmenta <br />131-136 Religiosa patientis et morientis senatoris memoria <br />137-145 Marianorum aliorumque sodalitiorum progressus <br />145-166 Cultus et patrocinia sanctorum nostrorum Ignatii et Francisci Xaverii <br />167-174 Exercitia S. P. N. Ignatii externis tradita <br />175-190 Ingeniorum in scholis, morumque cultura <br />191-198 Cura iuventuti in cinvictibus  et seminariis impensa <br />199-216 Rei oeconomicae incrementa et damna <br />217-283 Defuncti intra provinciam <br />Erwähnte Körperschaften:
-                  <ul>
-                     <li><a href="https://jesuiten-oenb.github.io/jesuiten-static/jesuiten_org__1.html">Profeßhaus Wien</a></li>
-                     <li><a href="https://jesuiten-oenb.github.io/jesuiten-static/jesuiten_org__2.html">Jesuitenkolleg Wien</a></li>
-                     <li><a href="https://jesuiten-oenb.github.io/jesuiten-static/jesuiten_org__4.html">Probationshaus Wien</a></li>
-                     <li><a href="https://jesuiten-oenb.github.io/jesuiten-static/jesuiten_org__292.html">Jesuitenkolleg Uzhhorod</a></li>
-                     <li><a href="https://jesuiten-oenb.github.io/jesuiten-static/.html">Jesuitenkolleg Uzhhorod</a></li>
-                     <li><a href="https://jesuiten-oenb.github.io/jesuiten-static/.html">Probationshaus Wien</a></li>
-                     <li><a href="https://jesuiten-oenb.github.io/jesuiten-static/.html">Profeßhaus Wien</a></li>
-                     <li><a href="https://jesuiten-oenb.github.io/jesuiten-static/.html">Jesuitenkolleg Wien</a></li>
+                  <ul class="collapsible" onclick="toggleList('orgList')">
+                     <li>Im Text erwähnte Körperschaften:</li>
+                     <ul class="content" id="orgList">
+                        <li><a href="https://jesuiten-oenb.github.io/jesuiten-static/jesuiten_org__1.html">Profeßhaus Wien</a></li>
+                        <li><a href="https://jesuiten-oenb.github.io/jesuiten-static/jesuiten_org__2.html">Jesuitenkolleg Wien</a></li>
+                        <li><a href="https://jesuiten-oenb.github.io/jesuiten-static/jesuiten_org__4.html">Probationshaus Wien</a></li>
+                        <li><a href="https://jesuiten-oenb.github.io/jesuiten-static/jesuiten_org__292.html">Jesuitenkolleg Uzhhorod</a></li>
+                     </ul>
                   </ul>Erwähnte Orte:
                   <ul>
                      <li><a href="https://jesuiten-oenb.github.io/jesuiten-static/jesuiten_place__2.html">Graz</a></li>

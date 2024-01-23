@@ -41,7 +41,25 @@
                         display: none !important;
                     }
                 </style>
-   </head>
+      <style>
+                    /* Add some basic styling for the collapsible list */
+                    .collapsible {
+                    list-style-type: none;
+                    cursor: pointer;
+                    }
+                    .content {
+                    display: none;
+                    }
+                </style><script>
+                    function toggleList(id) {
+                    var content = document.getElementById(id);
+                    if (content.style.display === "none") {
+                    content.style.display = "block";
+                    } else {
+                    content.style.display = "none";
+                    }
+                    }
+                </script></head>
    <body class="page">
       <div class="hfeed site" id="page">
          <div class="wrapper-fluid wrapper-navbar sticky-top hide-reading" id="wrapper-navbar"><a class="skip-link screen-reader-text sr-only" href="#content">Skip to content</a><nav class="navbar navbar-expand-lg">
@@ -135,13 +153,13 @@
                   Moravia ab anno 1556 usque ad annum 1618 <br />10r-27v Missiones patrum Soecietatis Jesu ab anno 1621 usque ad annum 1631 <br />27v-29v Quomodo veritatis hostis fortunatissimum reformationis et catholica religionis in
                   Bohemia, Silesia et Moravia plantatae cursum sufflaminaverit <br />29v-34v Missiones patrum Societatis Jesu tempore belli Suedici ab anno 1632 usque ad annum
                   1650 <br />34v-48r Missiones in altera universali religionis reformatione a patribus Societatis Jesu
-                  obita ab a. 1660 (sic! für 1650) usque ad annum 1662 <br />48r-69r Missiones patrum Societatis Jesu ab anno 1662 ad annum usque 1723 in Bohemia <a href="https://jesuiten-oenb.github.io/jesuiten-static/jesuiten_place__272.html">Provincia Bohemia</a><br />69r-80r Missiones patrum societatis Jesu ab anno 1662 usque ad annum 1723 in Moravia <a href="https://jesuiten-oenb.github.io/jesuiten-static/jesuiten_place__271.html">Moravia</a><br />80r-96v Missiones patrum Societatis Jesu ab anno 1662 ad annum usque 1723 in Silesia <a href="https://jesuiten-oenb.github.io/jesuiten-static/jesuiten_place__270.html">Silesia</a><br />96v-104v Missio Saxonica <a href="https://jesuiten-oenb.github.io/jesuiten-static/jesuiten_org__516.html">Jesuitenmission Saxonica</a><br />104v-113v Missio Moscovitica <a href="https://jesuiten-oenb.github.io/jesuiten-static/jesuiten_org__515.html">Jesuitenmission Moscow</a><br />113v-117r Missio Suecica <a href="https://jesuiten-oenb.github.io/jesuiten-static/jesuiten_org__475.html">Jesuitenmission Sweden</a><br /><ul>
-                     <li><a href="https://jesuiten-oenb.github.io/jesuiten-static/jesuiten_org__516.html">Jesuitenmission Saxonica</a></li>
-                     <li><a href="https://jesuiten-oenb.github.io/jesuiten-static/jesuiten_org__515.html">Jesuitenmission Moscow</a></li>
-                     <li><a href="https://jesuiten-oenb.github.io/jesuiten-static/jesuiten_org__475.html">Jesuitenmission Sweden</a></li>
-                     <li><a href="https://jesuiten-oenb.github.io/jesuiten-static/.html">Jesuitenmission Saxonica</a></li>
-                     <li><a href="https://jesuiten-oenb.github.io/jesuiten-static/.html">Jesuitenmission Moscow</a></li>
-                     <li><a href="https://jesuiten-oenb.github.io/jesuiten-static/.html">Jesuitenmission Sweden</a></li>
+                  obita ab a. 1660 (sic! für 1650) usque ad annum 1662 <br />48r-69r Missiones patrum Societatis Jesu ab anno 1662 ad annum usque 1723 in Bohemia <a href="https://jesuiten-oenb.github.io/jesuiten-static/jesuiten_place__272.html">Provincia Bohemia</a><br />69r-80r Missiones patrum societatis Jesu ab anno 1662 usque ad annum 1723 in Moravia <a href="https://jesuiten-oenb.github.io/jesuiten-static/jesuiten_place__271.html">Moravia</a><br />80r-96v Missiones patrum Societatis Jesu ab anno 1662 ad annum usque 1723 in Silesia <a href="https://jesuiten-oenb.github.io/jesuiten-static/jesuiten_place__270.html">Silesia</a><br />96v-104v Missio Saxonica <a href="https://jesuiten-oenb.github.io/jesuiten-static/jesuiten_org__516.html">Jesuitenmission Saxonica</a><br />104v-113v Missio Moscovitica <a href="https://jesuiten-oenb.github.io/jesuiten-static/jesuiten_org__515.html">Jesuitenmission Moscow</a><br />113v-117r Missio Suecica <a href="https://jesuiten-oenb.github.io/jesuiten-static/jesuiten_org__475.html">Jesuitenmission Sweden</a><br /><ul class="collapsible" onclick="toggleList('orgList')">
+                     <li>Im Text erwähnte Körperschaften:</li>
+                     <ul class="content" id="orgList">
+                        <li><a href="https://jesuiten-oenb.github.io/jesuiten-static/jesuiten_org__516.html">Jesuitenmission Saxonica</a></li>
+                        <li><a href="https://jesuiten-oenb.github.io/jesuiten-static/jesuiten_org__515.html">Jesuitenmission Moscow</a></li>
+                        <li><a href="https://jesuiten-oenb.github.io/jesuiten-static/jesuiten_org__475.html">Jesuitenmission Sweden</a></li>
+                     </ul>
                   </ul>Erwähnte Orte:
                   <ul>
                      <li><a href="https://jesuiten-oenb.github.io/jesuiten-static/jesuiten_place__272.html">Provincia Bohemia</a></li>

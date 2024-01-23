@@ -41,7 +41,25 @@
                         display: none !important;
                     }
                 </style>
-   </head>
+      <style>
+                    /* Add some basic styling for the collapsible list */
+                    .collapsible {
+                    list-style-type: none;
+                    cursor: pointer;
+                    }
+                    .content {
+                    display: none;
+                    }
+                </style><script>
+                    function toggleList(id) {
+                    var content = document.getElementById(id);
+                    if (content.style.display === "none") {
+                    content.style.display = "block";
+                    } else {
+                    content.style.display = "none";
+                    }
+                    }
+                </script></head>
    <body class="page">
       <div class="hfeed site" id="page">
          <div class="wrapper-fluid wrapper-navbar sticky-top hide-reading" id="wrapper-navbar"><a class="skip-link screen-reader-text sr-only" href="#content">Skip to content</a><nav class="navbar navbar-expand-lg">
@@ -124,108 +142,59 @@
                      in Böhmen. 
                      
                      </p>2r-3v Auflistung der Anzahl der Mitglieder; tabellarische Auflistung der verschiedenen Aktivitäten
-                  in den Domizilen. <br />4r-6v <a href="https://jesuiten-oenb.github.io/jesuiten-static/jesuiten_org__92.html">Profeßhaus Prag</a><br />6v-9v <a href="https://jesuiten-oenb.github.io/jesuiten-static/jesuiten_org__161.html">Jesuitenmission Dresden</a><br />9v-11v <a href="https://jesuiten-oenb.github.io/jesuiten-static/jesuiten_org__41.html">Missio Castrensis</a><br />12r-13r <a href="https://jesuiten-oenb.github.io/jesuiten-static/jesuiten_org__93.html">Jesuitenkolleg Březnice</a><br />14r-16v <a href="https://jesuiten-oenb.github.io/jesuiten-static/jesuiten_org__94.html">Jesuitenresidenz Svatá Hora</a><br />18r-20r <a href="https://jesuiten-oenb.github.io/jesuiten-static/jesuiten_org__95.html">Jesuitenkolleg Chomutov</a><br />21r-24v <a href="https://jesuiten-oenb.github.io/jesuiten-static/jesuiten_org__142.html">Jesuitenresidenz Maria Scheinensis</a><br />25r-27v <a href="https://jesuiten-oenb.github.io/jesuiten-static/jesuiten_org__96.html">Jesuitenkolleg Krumlov</a><br />29r-32v <a href="https://jesuiten-oenb.github.io/jesuiten-static/jesuiten_org__97.html">Jesuitenkolleg Cheb</a><br />33r-35v <a href="https://jesuiten-oenb.github.io/jesuiten-static/jesuiten_org__98.html">Jesuitenkolleg Jičín</a><br />35v-36v <a href="https://jesuiten-oenb.github.io/jesuiten-static/jesuiten_org__159.html">Probationshaus Jičín</a><br />37r-40r <a href="https://jesuiten-oenb.github.io/jesuiten-static/jesuiten_org__99.html">Jesuitenkolleg Kłodzko</a><br />41r-42v <a href="https://jesuiten-oenb.github.io/jesuiten-static/jesuiten_org__100.html">Jesuitenkolleg Klatovy</a><br />43r-46v <a href="https://jesuiten-oenb.github.io/jesuiten-static/jesuiten_org__101.html">Jesuitenkolleg Głogów</a><br />47r-50v <a href="https://jesuiten-oenb.github.io/jesuiten-static/jesuiten_org__102.html">Jesuitenkolleg Uherské Hradiště</a><br />51r-53v <a href="https://jesuiten-oenb.github.io/jesuiten-static/jesuiten_org__103.html">Jesuitenkolleg Jihlava</a><br />54r-56v <a href="https://jesuiten-oenb.github.io/jesuiten-static/jesuiten_org__104.html">Jesuitenkolleg Kutná Hora</a><br />56v-57v <a href="https://jesuiten-oenb.github.io/jesuiten-static/jesuiten_org__105.html">Jesuitenresidenz Golčův Jeníkov</a><br />58r-61r <a href="https://jesuiten-oenb.github.io/jesuiten-static/jesuiten_org__106.html">Jesuitenkolleg Legnica</a><br />61v-64r <a href="https://jesuiten-oenb.github.io/jesuiten-static/jesuiten_org__107.html">Jesuitenresidenz Otyń</a><br />65r-68v <a href="https://jesuiten-oenb.github.io/jesuiten-static/jesuiten_org__108.html">Jesuitenkolleg Litoměřice</a><br />69r-70v <a href="https://jesuiten-oenb.github.io/jesuiten-static/jesuiten_org__197.html">Jesuitenkolleg Prague ad S. Ignatium</a><br />71r-73v <a href="https://jesuiten-oenb.github.io/jesuiten-static/jesuiten_org__110.html">Jesuitenkolleg Nysa</a><br />74r-75v <a href="https://jesuiten-oenb.github.io/jesuiten-static/jesuiten_org__111.html">Jesuitenkolleg Jindřichův Hradec</a><br />76r-81r <a href="https://jesuiten-oenb.github.io/jesuiten-static/jesuiten_org__112.html">Jesuitenkolleg Olomouc</a><br />81r-81v <a href="https://jesuiten-oenb.github.io/jesuiten-static/jesuiten_org__400.html">Jesuitenmission Olomouc</a><br />82r-84v <a href="https://jesuiten-oenb.github.io/jesuiten-static/jesuiten_org__113.html">Jesuitenkolleg Opava</a><br />85r-86v <a href="https://jesuiten-oenb.github.io/jesuiten-static/jesuiten_org__140.html">Jesuitenresidenz Cieszyn</a><br />87r-88v <a href="https://jesuiten-oenb.github.io/jesuiten-static/jesuiten_org__401.html">Jesuitenmission Silesia Superiore, Cieszyn</a><br />88v-90r <a href="https://jesuiten-oenb.github.io/jesuiten-static/jesuiten_org__132.html">Jesuitenmission Brantice</a><br />90v-91r <a href="https://jesuiten-oenb.github.io/jesuiten-static/jesuiten_org__133.html">Jesuitenmission Pommersdorf</a><br />91v-94r <a href="https://jesuiten-oenb.github.io/jesuiten-static/jesuiten_org__294.html">Jesuitenmission Lichtensteinica Böhmen</a><a href="https://jesuiten-oenb.github.io/jesuiten-static/jesuiten_place__115.html">Opava</a><a href="https://jesuiten-oenb.github.io/jesuiten-static/jesuiten_place__330.html">Krnov</a><br />94r-94v <a href="https://jesuiten-oenb.github.io/jesuiten-static/jesuiten_org__41.html">Missio Castrensis</a><a href="https://jesuiten-oenb.github.io/jesuiten-static/jesuiten_place__262.html">Jablunkov Pass</a><a href="https://jesuiten-oenb.github.io/jesuiten-static/jesuiten_place__270.html">Silesia</a><a href="https://jesuiten-oenb.github.io/jesuiten-static/jesuiten_place__304.html">Hungary Kingdom</a><br />95r-98v <a href="https://jesuiten-oenb.github.io/jesuiten-static/jesuiten_org__115.html">Jesuitenkolleg Opole</a><br />99r-100r <a href="https://jesuiten-oenb.github.io/jesuiten-static/jesuiten_org__134.html">Jesuitenresidenz Piekary</a><br />101r-102v <a href="https://jesuiten-oenb.github.io/jesuiten-static/jesuiten_org__135.html">Jesuitenmission Tarnowskie Góry</a><br />103r-111v <a href="https://jesuiten-oenb.github.io/jesuiten-static/jesuiten_org__116.html">Jesuitenkolleg Prague ad S. Clementem</a><br />112r-118v <a href="https://jesuiten-oenb.github.io/jesuiten-static/jesuiten_org__117.html">Jesuitenkolleg Hradec Králové</a><br />119r-120v Missio episcopalis <a href="https://jesuiten-oenb.github.io/jesuiten-static/jesuiten_org__117.html">Jesuitenkolleg Hradec Králové</a><br />121r-122v <a href="https://jesuiten-oenb.github.io/jesuiten-static/jesuiten_org__136.html">Jesuitenresidenz Košumberk</a><br />123r-124v <a href="https://jesuiten-oenb.github.io/jesuiten-static/jesuiten_org__118.html">Jesuitenkolleg Żagań</a><br />125r-127r <a href="https://jesuiten-oenb.github.io/jesuiten-static/jesuiten_org__119.html">Jesuitenkolleg Świdnica</a><br />127r-127v <a href="https://jesuiten-oenb.github.io/jesuiten-static/jesuiten_org__137.html">Jesuitenresidenz Jelenia Góra</a><br />129r-132v <a href="https://jesuiten-oenb.github.io/jesuiten-static/jesuiten_org__120.html">Jesuitenkolleg Telč</a><a href="https://jesuiten-oenb.github.io/jesuiten-static/jesuiten_org__138.html">Probationshaus Telč</a><br />133r-140v <a href="https://jesuiten-oenb.github.io/jesuiten-static/jesuiten_org__121.html">Jesuitenkolleg Wrocław</a><br />141r-142v <a href="https://jesuiten-oenb.github.io/jesuiten-static/jesuiten_org__139.html">Jesuitenmission Brzeg</a><br />143r-145v <a href="https://jesuiten-oenb.github.io/jesuiten-static/jesuiten_org__122.html">Jesuitenkolleg Znoymo</a><br />146r-149v <a href="https://jesuiten-oenb.github.io/jesuiten-static/jesuiten_org__160.html">Probationshaus Brno</a><a href="https://jesuiten-oenb.github.io/jesuiten-static/jesuiten_org__123.html">Jesuitenkolleg Brno</a><br />150r-151v <a href="https://jesuiten-oenb.github.io/jesuiten-static/jesuiten_org__124.html">Jesuitenresidenz Tuřany</a><br />152r-152v <a href="https://jesuiten-oenb.github.io/jesuiten-static/jesuiten_org__294.html">Jesuitenmission Lichtensteinica Böhmen</a><br /><ul>
-                     <li><a href="https://jesuiten-oenb.github.io/jesuiten-static/jesuiten_org__92.html">Profeßhaus Prag</a></li>
-                     <li><a href="https://jesuiten-oenb.github.io/jesuiten-static/jesuiten_org__161.html">Jesuitenmission Dresden</a></li>
-                     <li><a href="https://jesuiten-oenb.github.io/jesuiten-static/jesuiten_org__41.html">Missio Castrensis</a></li>
-                     <li><a href="https://jesuiten-oenb.github.io/jesuiten-static/jesuiten_org__93.html">Jesuitenkolleg Březnice</a></li>
-                     <li><a href="https://jesuiten-oenb.github.io/jesuiten-static/jesuiten_org__94.html">Jesuitenresidenz Svatá Hora</a></li>
-                     <li><a href="https://jesuiten-oenb.github.io/jesuiten-static/jesuiten_org__95.html">Jesuitenkolleg Chomutov</a></li>
-                     <li><a href="https://jesuiten-oenb.github.io/jesuiten-static/jesuiten_org__142.html">Jesuitenresidenz Maria Scheinensis</a></li>
-                     <li><a href="https://jesuiten-oenb.github.io/jesuiten-static/jesuiten_org__96.html">Jesuitenkolleg Krumlov</a></li>
-                     <li><a href="https://jesuiten-oenb.github.io/jesuiten-static/jesuiten_org__97.html">Jesuitenkolleg Cheb</a></li>
-                     <li><a href="https://jesuiten-oenb.github.io/jesuiten-static/jesuiten_org__98.html">Jesuitenkolleg Jičín</a></li>
-                     <li><a href="https://jesuiten-oenb.github.io/jesuiten-static/jesuiten_org__159.html">Probationshaus Jičín</a></li>
-                     <li><a href="https://jesuiten-oenb.github.io/jesuiten-static/jesuiten_org__99.html">Jesuitenkolleg Kłodzko</a></li>
-                     <li><a href="https://jesuiten-oenb.github.io/jesuiten-static/jesuiten_org__100.html">Jesuitenkolleg Klatovy</a></li>
-                     <li><a href="https://jesuiten-oenb.github.io/jesuiten-static/jesuiten_org__101.html">Jesuitenkolleg Głogów</a></li>
-                     <li><a href="https://jesuiten-oenb.github.io/jesuiten-static/jesuiten_org__102.html">Jesuitenkolleg Uherské Hradiště</a></li>
-                     <li><a href="https://jesuiten-oenb.github.io/jesuiten-static/jesuiten_org__103.html">Jesuitenkolleg Jihlava</a></li>
-                     <li><a href="https://jesuiten-oenb.github.io/jesuiten-static/jesuiten_org__104.html">Jesuitenkolleg Kutná Hora</a></li>
-                     <li><a href="https://jesuiten-oenb.github.io/jesuiten-static/jesuiten_org__105.html">Jesuitenresidenz Golčův Jeníkov</a></li>
-                     <li><a href="https://jesuiten-oenb.github.io/jesuiten-static/jesuiten_org__106.html">Jesuitenkolleg Legnica</a></li>
-                     <li><a href="https://jesuiten-oenb.github.io/jesuiten-static/jesuiten_org__107.html">Jesuitenresidenz Otyń</a></li>
-                     <li><a href="https://jesuiten-oenb.github.io/jesuiten-static/jesuiten_org__108.html">Jesuitenkolleg Litoměřice</a></li>
-                     <li><a href="https://jesuiten-oenb.github.io/jesuiten-static/jesuiten_org__197.html">Jesuitenkolleg Prague ad S. Ignatium</a></li>
-                     <li><a href="https://jesuiten-oenb.github.io/jesuiten-static/jesuiten_org__110.html">Jesuitenkolleg Nysa</a></li>
-                     <li><a href="https://jesuiten-oenb.github.io/jesuiten-static/jesuiten_org__111.html">Jesuitenkolleg Jindřichův Hradec</a></li>
-                     <li><a href="https://jesuiten-oenb.github.io/jesuiten-static/jesuiten_org__112.html">Jesuitenkolleg Olomouc</a></li>
-                     <li><a href="https://jesuiten-oenb.github.io/jesuiten-static/jesuiten_org__400.html">Jesuitenmission Olomouc</a></li>
-                     <li><a href="https://jesuiten-oenb.github.io/jesuiten-static/jesuiten_org__113.html">Jesuitenkolleg Opava</a></li>
-                     <li><a href="https://jesuiten-oenb.github.io/jesuiten-static/jesuiten_org__140.html">Jesuitenresidenz Cieszyn</a></li>
-                     <li><a href="https://jesuiten-oenb.github.io/jesuiten-static/jesuiten_org__401.html">Jesuitenmission Silesia Superiore, Cieszyn</a></li>
-                     <li><a href="https://jesuiten-oenb.github.io/jesuiten-static/jesuiten_org__132.html">Jesuitenmission Brantice</a></li>
-                     <li><a href="https://jesuiten-oenb.github.io/jesuiten-static/jesuiten_org__133.html">Jesuitenmission Pommersdorf</a></li>
-                     <li><a href="https://jesuiten-oenb.github.io/jesuiten-static/jesuiten_org__294.html">Jesuitenmission Lichtensteinica Böhmen</a></li>
-                     <li><a href="https://jesuiten-oenb.github.io/jesuiten-static/jesuiten_org__41.html">Missio Castrensis</a></li>
-                     <li><a href="https://jesuiten-oenb.github.io/jesuiten-static/jesuiten_org__115.html">Jesuitenkolleg Opole</a></li>
-                     <li><a href="https://jesuiten-oenb.github.io/jesuiten-static/jesuiten_org__134.html">Jesuitenresidenz Piekary</a></li>
-                     <li><a href="https://jesuiten-oenb.github.io/jesuiten-static/jesuiten_org__135.html">Jesuitenmission Tarnowskie Góry</a></li>
-                     <li><a href="https://jesuiten-oenb.github.io/jesuiten-static/jesuiten_org__116.html">Jesuitenkolleg Prague ad S. Clementem</a></li>
-                     <li><a href="https://jesuiten-oenb.github.io/jesuiten-static/jesuiten_org__117.html">Jesuitenkolleg Hradec Králové</a></li>
-                     <li><a href="https://jesuiten-oenb.github.io/jesuiten-static/jesuiten_org__117.html">Jesuitenkolleg Hradec Králové</a></li>
-                     <li><a href="https://jesuiten-oenb.github.io/jesuiten-static/jesuiten_org__136.html">Jesuitenresidenz Košumberk</a></li>
-                     <li><a href="https://jesuiten-oenb.github.io/jesuiten-static/jesuiten_org__118.html">Jesuitenkolleg Żagań</a></li>
-                     <li><a href="https://jesuiten-oenb.github.io/jesuiten-static/jesuiten_org__119.html">Jesuitenkolleg Świdnica</a></li>
-                     <li><a href="https://jesuiten-oenb.github.io/jesuiten-static/jesuiten_org__137.html">Jesuitenresidenz Jelenia Góra</a></li>
-                     <li><a href="https://jesuiten-oenb.github.io/jesuiten-static/jesuiten_org__120.html">Jesuitenkolleg Telč</a></li>
-                     <li><a href="https://jesuiten-oenb.github.io/jesuiten-static/jesuiten_org__138.html">Probationshaus Telč</a></li>
-                     <li><a href="https://jesuiten-oenb.github.io/jesuiten-static/jesuiten_org__121.html">Jesuitenkolleg Wrocław</a></li>
-                     <li><a href="https://jesuiten-oenb.github.io/jesuiten-static/jesuiten_org__139.html">Jesuitenmission Brzeg</a></li>
-                     <li><a href="https://jesuiten-oenb.github.io/jesuiten-static/jesuiten_org__122.html">Jesuitenkolleg Znoymo</a></li>
-                     <li><a href="https://jesuiten-oenb.github.io/jesuiten-static/jesuiten_org__160.html">Probationshaus Brno</a></li>
-                     <li><a href="https://jesuiten-oenb.github.io/jesuiten-static/jesuiten_org__123.html">Jesuitenkolleg Brno</a></li>
-                     <li><a href="https://jesuiten-oenb.github.io/jesuiten-static/jesuiten_org__124.html">Jesuitenresidenz Tuřany</a></li>
-                     <li><a href="https://jesuiten-oenb.github.io/jesuiten-static/jesuiten_org__294.html">Jesuitenmission Lichtensteinica Böhmen</a></li>
-                     <li><a href="https://jesuiten-oenb.github.io/jesuiten-static/.html">Jesuitenkolleg Jindřichův Hradec</a></li>
-                     <li><a href="https://jesuiten-oenb.github.io/jesuiten-static/.html">Jesuitenmission Olomouc</a></li>
-                     <li><a href="https://jesuiten-oenb.github.io/jesuiten-static/.html">Jesuitenkolleg Znoymo</a></li>
-                     <li><a href="https://jesuiten-oenb.github.io/jesuiten-static/.html">Jesuitenkolleg Březnice</a></li>
-                     <li><a href="https://jesuiten-oenb.github.io/jesuiten-static/.html">Jesuitenkolleg Żagań</a></li>
-                     <li><a href="https://jesuiten-oenb.github.io/jesuiten-static/.html">Probationshaus Brno</a></li>
-                     <li><a href="https://jesuiten-oenb.github.io/jesuiten-static/.html">Jesuitenkolleg Telč</a></li>
-                     <li><a href="https://jesuiten-oenb.github.io/jesuiten-static/.html">Jesuitenmission Dresden</a></li>
-                     <li><a href="https://jesuiten-oenb.github.io/jesuiten-static/.html">Jesuitenkolleg Klatovy</a></li>
-                     <li><a href="https://jesuiten-oenb.github.io/jesuiten-static/.html">Probationshaus Jičín</a></li>
-                     <li><a href="https://jesuiten-oenb.github.io/jesuiten-static/.html">Jesuitenresidenz Piekary</a></li>
-                     <li><a href="https://jesuiten-oenb.github.io/jesuiten-static/.html">Missio Castrensis</a></li>
-                     <li><a href="https://jesuiten-oenb.github.io/jesuiten-static/.html">Jesuitenkolleg Jihlava</a></li>
-                     <li><a href="https://jesuiten-oenb.github.io/jesuiten-static/.html">Jesuitenmission Silesia Superiore, Cieszyn</a></li>
-                     <li><a href="https://jesuiten-oenb.github.io/jesuiten-static/.html">Jesuitenkolleg Wrocław</a></li>
-                     <li><a href="https://jesuiten-oenb.github.io/jesuiten-static/.html">Jesuitenresidenz Otyń</a></li>
-                     <li><a href="https://jesuiten-oenb.github.io/jesuiten-static/.html">Jesuitenmission Lichtensteinica Böhmen</a></li>
-                     <li><a href="https://jesuiten-oenb.github.io/jesuiten-static/.html">Jesuitenkolleg Krumlov</a></li>
-                     <li><a href="https://jesuiten-oenb.github.io/jesuiten-static/.html">Jesuitenresidenz Cieszyn</a></li>
-                     <li><a href="https://jesuiten-oenb.github.io/jesuiten-static/.html">Jesuitenkolleg Uherské Hradiště</a></li>
-                     <li><a href="https://jesuiten-oenb.github.io/jesuiten-static/.html">Jesuitenresidenz Maria Scheinensis</a></li>
-                     <li><a href="https://jesuiten-oenb.github.io/jesuiten-static/.html">Jesuitenmission Brzeg</a></li>
-                     <li><a href="https://jesuiten-oenb.github.io/jesuiten-static/.html">Jesuitenkolleg Cheb</a></li>
-                     <li><a href="https://jesuiten-oenb.github.io/jesuiten-static/.html">Jesuitenmission Tarnowskie Góry</a></li>
-                     <li><a href="https://jesuiten-oenb.github.io/jesuiten-static/.html">Jesuitenkolleg Opava</a></li>
-                     <li><a href="https://jesuiten-oenb.github.io/jesuiten-static/.html">Jesuitenkolleg Jičín</a></li>
-                     <li><a href="https://jesuiten-oenb.github.io/jesuiten-static/.html">Jesuitenkolleg Kutná Hora</a></li>
-                     <li><a href="https://jesuiten-oenb.github.io/jesuiten-static/.html">Jesuitenkolleg Legnica</a></li>
-                     <li><a href="https://jesuiten-oenb.github.io/jesuiten-static/.html">Jesuitenkolleg Prague ad S. Ignatium</a></li>
-                     <li><a href="https://jesuiten-oenb.github.io/jesuiten-static/.html">Jesuitenmission Brantice</a></li>
-                     <li><a href="https://jesuiten-oenb.github.io/jesuiten-static/.html">Jesuitenresidenz Svatá Hora</a></li>
-                     <li><a href="https://jesuiten-oenb.github.io/jesuiten-static/.html">Jesuitenresidenz Golčův Jeníkov</a></li>
-                     <li><a href="https://jesuiten-oenb.github.io/jesuiten-static/.html">Jesuitenkolleg Nysa</a></li>
-                     <li><a href="https://jesuiten-oenb.github.io/jesuiten-static/.html">Jesuitenkolleg Chomutov</a></li>
-                     <li><a href="https://jesuiten-oenb.github.io/jesuiten-static/.html">Jesuitenkolleg Olomouc</a></li>
-                     <li><a href="https://jesuiten-oenb.github.io/jesuiten-static/.html">Jesuitenkolleg Hradec Králové</a></li>
-                     <li><a href="https://jesuiten-oenb.github.io/jesuiten-static/.html">Jesuitenmission Pommersdorf</a></li>
-                     <li><a href="https://jesuiten-oenb.github.io/jesuiten-static/.html">Jesuitenkolleg Brno</a></li>
-                     <li><a href="https://jesuiten-oenb.github.io/jesuiten-static/.html">Jesuitenkolleg Litoměřice</a></li>
-                     <li><a href="https://jesuiten-oenb.github.io/jesuiten-static/.html">Jesuitenkolleg Głogów</a></li>
-                     <li><a href="https://jesuiten-oenb.github.io/jesuiten-static/.html">Profeßhaus Prag</a></li>
-                     <li><a href="https://jesuiten-oenb.github.io/jesuiten-static/.html">Jesuitenkolleg Prague ad S. Clementem</a></li>
-                     <li><a href="https://jesuiten-oenb.github.io/jesuiten-static/.html">Jesuitenkolleg Kłodzko</a></li>
-                     <li><a href="https://jesuiten-oenb.github.io/jesuiten-static/.html">Jesuitenresidenz Tuřany</a></li>
-                     <li><a href="https://jesuiten-oenb.github.io/jesuiten-static/.html">Jesuitenkolleg Opole</a></li>
-                     <li><a href="https://jesuiten-oenb.github.io/jesuiten-static/.html">Jesuitenresidenz Jelenia Góra</a></li>
-                     <li><a href="https://jesuiten-oenb.github.io/jesuiten-static/.html">Jesuitenkolleg Świdnica</a></li>
-                     <li><a href="https://jesuiten-oenb.github.io/jesuiten-static/.html">Probationshaus Telč</a></li>
-                     <li><a href="https://jesuiten-oenb.github.io/jesuiten-static/.html">Jesuitenresidenz Košumberk</a></li>
+                  in den Domizilen. <br />4r-6v <a href="https://jesuiten-oenb.github.io/jesuiten-static/jesuiten_org__92.html">Profeßhaus Prag</a><br />6v-9v <a href="https://jesuiten-oenb.github.io/jesuiten-static/jesuiten_org__161.html">Jesuitenmission Dresden</a><br />9v-11v <a href="https://jesuiten-oenb.github.io/jesuiten-static/jesuiten_org__41.html">Missio Castrensis</a><br />12r-13r <a href="https://jesuiten-oenb.github.io/jesuiten-static/jesuiten_org__93.html">Jesuitenkolleg Březnice</a><br />14r-16v <a href="https://jesuiten-oenb.github.io/jesuiten-static/jesuiten_org__94.html">Jesuitenresidenz Svatá Hora</a><br />18r-20r <a href="https://jesuiten-oenb.github.io/jesuiten-static/jesuiten_org__95.html">Jesuitenkolleg Chomutov</a><br />21r-24v <a href="https://jesuiten-oenb.github.io/jesuiten-static/jesuiten_org__142.html">Jesuitenresidenz Maria Scheinensis</a><br />25r-27v <a href="https://jesuiten-oenb.github.io/jesuiten-static/jesuiten_org__96.html">Jesuitenkolleg Krumlov</a><br />29r-32v <a href="https://jesuiten-oenb.github.io/jesuiten-static/jesuiten_org__97.html">Jesuitenkolleg Cheb</a><br />33r-35v <a href="https://jesuiten-oenb.github.io/jesuiten-static/jesuiten_org__98.html">Jesuitenkolleg Jičín</a><br />35v-36v <a href="https://jesuiten-oenb.github.io/jesuiten-static/jesuiten_org__159.html">Probationshaus Jičín</a><br />37r-40r <a href="https://jesuiten-oenb.github.io/jesuiten-static/jesuiten_org__99.html">Jesuitenkolleg Kłodzko</a><br />41r-42v <a href="https://jesuiten-oenb.github.io/jesuiten-static/jesuiten_org__100.html">Jesuitenkolleg Klatovy</a><br />43r-46v <a href="https://jesuiten-oenb.github.io/jesuiten-static/jesuiten_org__101.html">Jesuitenkolleg Głogów</a><br />47r-50v <a href="https://jesuiten-oenb.github.io/jesuiten-static/jesuiten_org__102.html">Jesuitenkolleg Uherské Hradiště</a><br />51r-53v <a href="https://jesuiten-oenb.github.io/jesuiten-static/jesuiten_org__103.html">Jesuitenkolleg Jihlava</a><br />54r-56v <a href="https://jesuiten-oenb.github.io/jesuiten-static/jesuiten_org__104.html">Jesuitenkolleg Kutná Hora</a><br />56v-57v <a href="https://jesuiten-oenb.github.io/jesuiten-static/jesuiten_org__105.html">Jesuitenresidenz Golčův Jeníkov</a><br />58r-61r <a href="https://jesuiten-oenb.github.io/jesuiten-static/jesuiten_org__106.html">Jesuitenkolleg Legnica</a><br />61v-64r <a href="https://jesuiten-oenb.github.io/jesuiten-static/jesuiten_org__107.html">Jesuitenresidenz Otyń</a><br />65r-68v <a href="https://jesuiten-oenb.github.io/jesuiten-static/jesuiten_org__108.html">Jesuitenkolleg Litoměřice</a><br />69r-70v <a href="https://jesuiten-oenb.github.io/jesuiten-static/jesuiten_org__197.html">Jesuitenkolleg Prague ad S. Ignatium</a><br />71r-73v <a href="https://jesuiten-oenb.github.io/jesuiten-static/jesuiten_org__110.html">Jesuitenkolleg Nysa</a><br />74r-75v <a href="https://jesuiten-oenb.github.io/jesuiten-static/jesuiten_org__111.html">Jesuitenkolleg Jindřichův Hradec</a><br />76r-81r <a href="https://jesuiten-oenb.github.io/jesuiten-static/jesuiten_org__112.html">Jesuitenkolleg Olomouc</a><br />81r-81v <a href="https://jesuiten-oenb.github.io/jesuiten-static/jesuiten_org__400.html">Jesuitenmission Olomouc</a><br />82r-84v <a href="https://jesuiten-oenb.github.io/jesuiten-static/jesuiten_org__113.html">Jesuitenkolleg Opava</a><br />85r-86v <a href="https://jesuiten-oenb.github.io/jesuiten-static/jesuiten_org__140.html">Jesuitenresidenz Cieszyn</a><br />87r-88v <a href="https://jesuiten-oenb.github.io/jesuiten-static/jesuiten_org__401.html">Jesuitenmission Silesia Superiore, Cieszyn</a><br />88v-90r <a href="https://jesuiten-oenb.github.io/jesuiten-static/jesuiten_org__132.html">Jesuitenmission Brantice</a><br />90v-91r <a href="https://jesuiten-oenb.github.io/jesuiten-static/jesuiten_org__133.html">Jesuitenmission Pommersdorf</a><br />91v-94r <a href="https://jesuiten-oenb.github.io/jesuiten-static/jesuiten_org__294.html">Jesuitenmission Lichtensteinica Böhmen</a><a href="https://jesuiten-oenb.github.io/jesuiten-static/jesuiten_place__115.html">Opava</a><a href="https://jesuiten-oenb.github.io/jesuiten-static/jesuiten_place__330.html">Krnov</a><br />94r-94v <a href="https://jesuiten-oenb.github.io/jesuiten-static/jesuiten_org__41.html">Missio Castrensis</a><a href="https://jesuiten-oenb.github.io/jesuiten-static/jesuiten_place__262.html">Jablunkov Pass</a><a href="https://jesuiten-oenb.github.io/jesuiten-static/jesuiten_place__270.html">Silesia</a><a href="https://jesuiten-oenb.github.io/jesuiten-static/jesuiten_place__304.html">Hungary Kingdom</a><br />95r-98v <a href="https://jesuiten-oenb.github.io/jesuiten-static/jesuiten_org__115.html">Jesuitenkolleg Opole</a><br />99r-100r <a href="https://jesuiten-oenb.github.io/jesuiten-static/jesuiten_org__134.html">Jesuitenresidenz Piekary</a><br />101r-102v <a href="https://jesuiten-oenb.github.io/jesuiten-static/jesuiten_org__135.html">Jesuitenmission Tarnowskie Góry</a><br />103r-111v <a href="https://jesuiten-oenb.github.io/jesuiten-static/jesuiten_org__116.html">Jesuitenkolleg Prague ad S. Clementem</a><br />112r-118v <a href="https://jesuiten-oenb.github.io/jesuiten-static/jesuiten_org__117.html">Jesuitenkolleg Hradec Králové</a><br />119r-120v Missio episcopalis <a href="https://jesuiten-oenb.github.io/jesuiten-static/jesuiten_org__117.html">Jesuitenkolleg Hradec Králové</a><br />121r-122v <a href="https://jesuiten-oenb.github.io/jesuiten-static/jesuiten_org__136.html">Jesuitenresidenz Košumberk</a><br />123r-124v <a href="https://jesuiten-oenb.github.io/jesuiten-static/jesuiten_org__118.html">Jesuitenkolleg Żagań</a><br />125r-127r <a href="https://jesuiten-oenb.github.io/jesuiten-static/jesuiten_org__119.html">Jesuitenkolleg Świdnica</a><br />127r-127v <a href="https://jesuiten-oenb.github.io/jesuiten-static/jesuiten_org__137.html">Jesuitenresidenz Jelenia Góra</a><br />129r-132v <a href="https://jesuiten-oenb.github.io/jesuiten-static/jesuiten_org__120.html">Jesuitenkolleg Telč</a><a href="https://jesuiten-oenb.github.io/jesuiten-static/jesuiten_org__138.html">Probationshaus Telč</a><br />133r-140v <a href="https://jesuiten-oenb.github.io/jesuiten-static/jesuiten_org__121.html">Jesuitenkolleg Wrocław</a><br />141r-142v <a href="https://jesuiten-oenb.github.io/jesuiten-static/jesuiten_org__139.html">Jesuitenmission Brzeg</a><br />143r-145v <a href="https://jesuiten-oenb.github.io/jesuiten-static/jesuiten_org__122.html">Jesuitenkolleg Znoymo</a><br />146r-149v <a href="https://jesuiten-oenb.github.io/jesuiten-static/jesuiten_org__160.html">Probationshaus Brno</a><a href="https://jesuiten-oenb.github.io/jesuiten-static/jesuiten_org__123.html">Jesuitenkolleg Brno</a><br />150r-151v <a href="https://jesuiten-oenb.github.io/jesuiten-static/jesuiten_org__124.html">Jesuitenresidenz Tuřany</a><br />152r-152v <a href="https://jesuiten-oenb.github.io/jesuiten-static/jesuiten_org__294.html">Jesuitenmission Lichtensteinica Böhmen</a><br /><ul class="collapsible" onclick="toggleList('orgList')">
+                     <li>Im Text erwähnte Körperschaften:</li>
+                     <ul class="content" id="orgList">
+                        <li><a href="https://jesuiten-oenb.github.io/jesuiten-static/jesuiten_org__92.html">Profeßhaus Prag</a></li>
+                        <li><a href="https://jesuiten-oenb.github.io/jesuiten-static/jesuiten_org__161.html">Jesuitenmission Dresden</a></li>
+                        <li><a href="https://jesuiten-oenb.github.io/jesuiten-static/jesuiten_org__41.html">Missio Castrensis</a></li>
+                        <li><a href="https://jesuiten-oenb.github.io/jesuiten-static/jesuiten_org__93.html">Jesuitenkolleg Březnice</a></li>
+                        <li><a href="https://jesuiten-oenb.github.io/jesuiten-static/jesuiten_org__94.html">Jesuitenresidenz Svatá Hora</a></li>
+                        <li><a href="https://jesuiten-oenb.github.io/jesuiten-static/jesuiten_org__95.html">Jesuitenkolleg Chomutov</a></li>
+                        <li><a href="https://jesuiten-oenb.github.io/jesuiten-static/jesuiten_org__142.html">Jesuitenresidenz Maria Scheinensis</a></li>
+                        <li><a href="https://jesuiten-oenb.github.io/jesuiten-static/jesuiten_org__96.html">Jesuitenkolleg Krumlov</a></li>
+                        <li><a href="https://jesuiten-oenb.github.io/jesuiten-static/jesuiten_org__97.html">Jesuitenkolleg Cheb</a></li>
+                        <li><a href="https://jesuiten-oenb.github.io/jesuiten-static/jesuiten_org__98.html">Jesuitenkolleg Jičín</a></li>
+                        <li><a href="https://jesuiten-oenb.github.io/jesuiten-static/jesuiten_org__159.html">Probationshaus Jičín</a></li>
+                        <li><a href="https://jesuiten-oenb.github.io/jesuiten-static/jesuiten_org__99.html">Jesuitenkolleg Kłodzko</a></li>
+                        <li><a href="https://jesuiten-oenb.github.io/jesuiten-static/jesuiten_org__100.html">Jesuitenkolleg Klatovy</a></li>
+                        <li><a href="https://jesuiten-oenb.github.io/jesuiten-static/jesuiten_org__101.html">Jesuitenkolleg Głogów</a></li>
+                        <li><a href="https://jesuiten-oenb.github.io/jesuiten-static/jesuiten_org__102.html">Jesuitenkolleg Uherské Hradiště</a></li>
+                        <li><a href="https://jesuiten-oenb.github.io/jesuiten-static/jesuiten_org__103.html">Jesuitenkolleg Jihlava</a></li>
+                        <li><a href="https://jesuiten-oenb.github.io/jesuiten-static/jesuiten_org__104.html">Jesuitenkolleg Kutná Hora</a></li>
+                        <li><a href="https://jesuiten-oenb.github.io/jesuiten-static/jesuiten_org__105.html">Jesuitenresidenz Golčův Jeníkov</a></li>
+                        <li><a href="https://jesuiten-oenb.github.io/jesuiten-static/jesuiten_org__106.html">Jesuitenkolleg Legnica</a></li>
+                        <li><a href="https://jesuiten-oenb.github.io/jesuiten-static/jesuiten_org__107.html">Jesuitenresidenz Otyń</a></li>
+                        <li><a href="https://jesuiten-oenb.github.io/jesuiten-static/jesuiten_org__108.html">Jesuitenkolleg Litoměřice</a></li>
+                        <li><a href="https://jesuiten-oenb.github.io/jesuiten-static/jesuiten_org__197.html">Jesuitenkolleg Prague ad S. Ignatium</a></li>
+                        <li><a href="https://jesuiten-oenb.github.io/jesuiten-static/jesuiten_org__110.html">Jesuitenkolleg Nysa</a></li>
+                        <li><a href="https://jesuiten-oenb.github.io/jesuiten-static/jesuiten_org__111.html">Jesuitenkolleg Jindřichův Hradec</a></li>
+                        <li><a href="https://jesuiten-oenb.github.io/jesuiten-static/jesuiten_org__112.html">Jesuitenkolleg Olomouc</a></li>
+                        <li><a href="https://jesuiten-oenb.github.io/jesuiten-static/jesuiten_org__400.html">Jesuitenmission Olomouc</a></li>
+                        <li><a href="https://jesuiten-oenb.github.io/jesuiten-static/jesuiten_org__113.html">Jesuitenkolleg Opava</a></li>
+                        <li><a href="https://jesuiten-oenb.github.io/jesuiten-static/jesuiten_org__140.html">Jesuitenresidenz Cieszyn</a></li>
+                        <li><a href="https://jesuiten-oenb.github.io/jesuiten-static/jesuiten_org__401.html">Jesuitenmission Silesia Superiore, Cieszyn</a></li>
+                        <li><a href="https://jesuiten-oenb.github.io/jesuiten-static/jesuiten_org__132.html">Jesuitenmission Brantice</a></li>
+                        <li><a href="https://jesuiten-oenb.github.io/jesuiten-static/jesuiten_org__133.html">Jesuitenmission Pommersdorf</a></li>
+                        <li><a href="https://jesuiten-oenb.github.io/jesuiten-static/jesuiten_org__294.html">Jesuitenmission Lichtensteinica Böhmen</a></li>
+                        <li><a href="https://jesuiten-oenb.github.io/jesuiten-static/jesuiten_org__115.html">Jesuitenkolleg Opole</a></li>
+                        <li><a href="https://jesuiten-oenb.github.io/jesuiten-static/jesuiten_org__134.html">Jesuitenresidenz Piekary</a></li>
+                        <li><a href="https://jesuiten-oenb.github.io/jesuiten-static/jesuiten_org__135.html">Jesuitenmission Tarnowskie Góry</a></li>
+                        <li><a href="https://jesuiten-oenb.github.io/jesuiten-static/jesuiten_org__116.html">Jesuitenkolleg Prague ad S. Clementem</a></li>
+                        <li><a href="https://jesuiten-oenb.github.io/jesuiten-static/jesuiten_org__117.html">Jesuitenkolleg Hradec Králové</a></li>
+                        <li><a href="https://jesuiten-oenb.github.io/jesuiten-static/jesuiten_org__136.html">Jesuitenresidenz Košumberk</a></li>
+                        <li><a href="https://jesuiten-oenb.github.io/jesuiten-static/jesuiten_org__118.html">Jesuitenkolleg Żagań</a></li>
+                        <li><a href="https://jesuiten-oenb.github.io/jesuiten-static/jesuiten_org__119.html">Jesuitenkolleg Świdnica</a></li>
+                        <li><a href="https://jesuiten-oenb.github.io/jesuiten-static/jesuiten_org__137.html">Jesuitenresidenz Jelenia Góra</a></li>
+                        <li><a href="https://jesuiten-oenb.github.io/jesuiten-static/jesuiten_org__120.html">Jesuitenkolleg Telč</a></li>
+                        <li><a href="https://jesuiten-oenb.github.io/jesuiten-static/jesuiten_org__138.html">Probationshaus Telč</a></li>
+                        <li><a href="https://jesuiten-oenb.github.io/jesuiten-static/jesuiten_org__121.html">Jesuitenkolleg Wrocław</a></li>
+                        <li><a href="https://jesuiten-oenb.github.io/jesuiten-static/jesuiten_org__139.html">Jesuitenmission Brzeg</a></li>
+                        <li><a href="https://jesuiten-oenb.github.io/jesuiten-static/jesuiten_org__122.html">Jesuitenkolleg Znoymo</a></li>
+                        <li><a href="https://jesuiten-oenb.github.io/jesuiten-static/jesuiten_org__160.html">Probationshaus Brno</a></li>
+                        <li><a href="https://jesuiten-oenb.github.io/jesuiten-static/jesuiten_org__123.html">Jesuitenkolleg Brno</a></li>
+                        <li><a href="https://jesuiten-oenb.github.io/jesuiten-static/jesuiten_org__124.html">Jesuitenresidenz Tuřany</a></li>
+                     </ul>
                   </ul>Erwähnte Orte:
                   <ul>
                      <li><a href="https://jesuiten-oenb.github.io/jesuiten-static/jesuiten_place__272.html">Provincia Bohemia</a></li>

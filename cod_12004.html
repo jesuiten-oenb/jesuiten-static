@@ -41,7 +41,25 @@
                         display: none !important;
                     }
                 </style>
-   </head>
+      <style>
+                    /* Add some basic styling for the collapsible list */
+                    .collapsible {
+                    list-style-type: none;
+                    cursor: pointer;
+                    }
+                    .content {
+                    display: none;
+                    }
+                </style><script>
+                    function toggleList(id) {
+                    var content = document.getElementById(id);
+                    if (content.style.display === "none") {
+                    content.style.display = "block";
+                    } else {
+                    content.style.display = "none";
+                    }
+                    }
+                </script></head>
    <body class="page">
       <div class="hfeed site" id="page">
          <div class="wrapper-fluid wrapper-navbar sticky-top hide-reading" id="wrapper-navbar"><a class="skip-link screen-reader-text sr-only" href="#content">Skip to content</a><nav class="navbar navbar-expand-lg">
@@ -134,22 +152,11 @@
                   et 1722 <a href="https://jesuiten-oenb.github.io/jesuiten-static/jesuiten_org__116.html">Jesuitenkolleg Prague ad S. Clementem</a><br />23r-26r Kopie des gleichen Compendium auf fols. 21r-22v <a href="https://jesuiten-oenb.github.io/jesuiten-static/jesuiten_org__116.html">Jesuitenkolleg Prague ad S. Clementem</a><br />27r-30v Supplementum histroiae collegii SJ Pragae ad S. Clementem ad annos 1723, 1724 et 1725
                   <a href="https://jesuiten-oenb.github.io/jesuiten-static/jesuiten_org__116.html">Jesuitenkolleg Prague ad S. Clementem</a><br />31r-34v Kopie des gleichen Supplementum wie auf fols. 27r-30v <a href="https://jesuiten-oenb.github.io/jesuiten-static/jesuiten_org__116.html">Jesuitenkolleg Prague ad S. Clementem</a><br />37r-38v Supplementum histroiae collegii SJ Pragae ad S. Clementem ad a. 1726 <a href="https://jesuiten-oenb.github.io/jesuiten-static/jesuiten_org__116.html">Jesuitenkolleg Prague ad S. Clementem</a><br />39r-42v Supplementum histroiae collegii SJ Pragae ad S. Clementem ad annos 1727, 1728 et 1729
                   <a href="https://jesuiten-oenb.github.io/jesuiten-static/jesuiten_org__116.html">Jesuitenkolleg Prague ad S. Clementem</a><br />Erwähnte Körperschaften:
-                  <ul>
-                     <li><a href="https://jesuiten-oenb.github.io/jesuiten-static/jesuiten_org__116.html">Jesuitenkolleg Prague ad S. Clementem</a></li>
-                     <li><a href="https://jesuiten-oenb.github.io/jesuiten-static/jesuiten_org__116.html">Jesuitenkolleg Prague ad S. Clementem</a></li>
-                     <li><a href="https://jesuiten-oenb.github.io/jesuiten-static/jesuiten_org__116.html">Jesuitenkolleg Prague ad S. Clementem</a></li>
-                     <li><a href="https://jesuiten-oenb.github.io/jesuiten-static/jesuiten_org__116.html">Jesuitenkolleg Prague ad S. Clementem</a></li>
-                     <li><a href="https://jesuiten-oenb.github.io/jesuiten-static/jesuiten_org__116.html">Jesuitenkolleg Prague ad S. Clementem</a></li>
-                     <li><a href="https://jesuiten-oenb.github.io/jesuiten-static/jesuiten_org__116.html">Jesuitenkolleg Prague ad S. Clementem</a></li>
-                     <li><a href="https://jesuiten-oenb.github.io/jesuiten-static/jesuiten_org__116.html">Jesuitenkolleg Prague ad S. Clementem</a></li>
-                     <li><a href="https://jesuiten-oenb.github.io/jesuiten-static/jesuiten_org__116.html">Jesuitenkolleg Prague ad S. Clementem</a></li>
-                     <li><a href="https://jesuiten-oenb.github.io/jesuiten-static/jesuiten_org__116.html">Jesuitenkolleg Prague ad S. Clementem</a></li>
-                     <li><a href="https://jesuiten-oenb.github.io/jesuiten-static/jesuiten_org__116.html">Jesuitenkolleg Prague ad S. Clementem</a></li>
-                     <li><a href="https://jesuiten-oenb.github.io/jesuiten-static/jesuiten_org__116.html">Jesuitenkolleg Prague ad S. Clementem</a></li>
-                     <li><a href="https://jesuiten-oenb.github.io/jesuiten-static/jesuiten_org__116.html">Jesuitenkolleg Prague ad S. Clementem</a></li>
-                     <li><a href="https://jesuiten-oenb.github.io/jesuiten-static/jesuiten_org__116.html">Jesuitenkolleg Prague ad S. Clementem</a></li>
-                     <li><a href="https://jesuiten-oenb.github.io/jesuiten-static/jesuiten_org__116.html">Jesuitenkolleg Prague ad S. Clementem</a></li>
-                     <li><a href="https://jesuiten-oenb.github.io/jesuiten-static/.html">Jesuitenkolleg Prague ad S. Clementem</a></li>
+                  <ul class="collapsible" onclick="toggleList('orgList')">
+                     <li>Im Text erwähnte Körperschaften:</li>
+                     <ul class="content" id="orgList">
+                        <li><a href="https://jesuiten-oenb.github.io/jesuiten-static/jesuiten_org__116.html">Jesuitenkolleg Prague ad S. Clementem</a></li>
+                     </ul>
                   </ul>
                </div>
             </div>

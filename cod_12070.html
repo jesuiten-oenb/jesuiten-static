@@ -41,7 +41,25 @@
                         display: none !important;
                     }
                 </style>
-   </head>
+      <style>
+                    /* Add some basic styling for the collapsible list */
+                    .collapsible {
+                    list-style-type: none;
+                    cursor: pointer;
+                    }
+                    .content {
+                    display: none;
+                    }
+                </style><script>
+                    function toggleList(id) {
+                    var content = document.getElementById(id);
+                    if (content.style.display === "none") {
+                    content.style.display = "block";
+                    } else {
+                    content.style.display = "none";
+                    }
+                    }
+                </script></head>
    <body class="page">
       <div class="hfeed site" id="page">
          <div class="wrapper-fluid wrapper-navbar sticky-top hide-reading" id="wrapper-navbar"><a class="skip-link screen-reader-text sr-only" href="#content">Skip to content</a><nav class="navbar navbar-expand-lg">
@@ -125,63 +143,37 @@
                      mit kurzen Berichten über einzelnen Orte hinzugefügt. 
                      
                      </p>1-2 Numerus et distributio personarum <a href="https://jesuiten-oenb.github.io/jesuiten-static/jesuiten_org__1.html">Profeßhaus Wien</a><a href="https://jesuiten-oenb.github.io/jesuiten-static/jesuiten_org__2.html">Jesuitenkolleg Wien</a><a href="https://jesuiten-oenb.github.io/jesuiten-static/jesuiten_org__4.html">Probationshaus Wien</a><a href="https://jesuiten-oenb.github.io/jesuiten-static/jesuiten_org__5.html">Jesuitenkolleg Graz</a><a href="https://jesuiten-oenb.github.io/jesuiten-static/jesuiten_org__8.html">Jesuitenkolleg Linz</a><a href="https://jesuiten-oenb.github.io/jesuiten-static/jesuiten_org__9.html">Jesuitenkolleg Bratislava</a><a href="https://jesuiten-oenb.github.io/jesuiten-static/jesuiten_org__10.html">Jesuitenkolleg Passau</a><a href="https://jesuiten-oenb.github.io/jesuiten-static/jesuiten_org__11.html">Jesuitenkolleg Trnava</a><a href="https://jesuiten-oenb.github.io/jesuiten-static/jesuiten_org__12.html">Jesuitenkolleg Győr</a><a href="https://jesuiten-oenb.github.io/jesuiten-static/jesuiten_org__13.html">Jesuitenkolleg Ljubljana</a><a href="https://jesuiten-oenb.github.io/jesuiten-static/jesuiten_org__16.html">Jesuitenkolleg Klagenfurt</a><a href="https://jesuiten-oenb.github.io/jesuiten-static/jesuiten_org__18.html">Jesuitenkolleg Zagreb</a><a href="https://jesuiten-oenb.github.io/jesuiten-static/jesuiten_org__35.html">Jesuitenkolleg Krems</a><a href="https://jesuiten-oenb.github.io/jesuiten-static/jesuiten_org__36.html">Jesuitenkolleg Gorizia</a><a href="https://jesuiten-oenb.github.io/jesuiten-static/jesuiten_org__37.html">Jesuitenkolleg Judenburg</a><a href="https://jesuiten-oenb.github.io/jesuiten-static/jesuiten_org__38.html">Jesuitenkolleg Trieste</a><a href="https://jesuiten-oenb.github.io/jesuiten-static/jesuiten_org__39.html">Probationshaus Leoben</a><a href="https://jesuiten-oenb.github.io/jesuiten-static/jesuiten_org__40.html">Jesuitenkolleg Rijeka</a><a href="https://jesuiten-oenb.github.io/jesuiten-static/jesuiten_org__44.html">Jesuitenresidenz Varaždin</a><a href="https://jesuiten-oenb.github.io/jesuiten-static/jesuiten_org__53.html">Jesuitenkolleg Steyr</a><a href="https://jesuiten-oenb.github.io/jesuiten-static/jesuiten_org__79.html">Jesuitenkolleg Košice</a><a href="https://jesuiten-oenb.github.io/jesuiten-static/jesuiten_org__81.html">Jesuitenkolleg Banská Bystrica</a><a href="https://jesuiten-oenb.github.io/jesuiten-static/jesuiten_org__84.html">Jesuitenkolleg Levoča</a><a href="https://jesuiten-oenb.github.io/jesuiten-static/jesuiten_org__87.html">Jesuitenkolleg Sopron</a><a href="https://jesuiten-oenb.github.io/jesuiten-static/jesuiten_org__89.html">Jesuitenkolleg Trenčín</a><a href="https://jesuiten-oenb.github.io/jesuiten-static/jesuiten_org__291.html">Jesuitenkolleg Wiener Neustadt</a><a href="https://jesuiten-oenb.github.io/jesuiten-static/jesuiten_org__292.html">Jesuitenkolleg Uzhhorod</a><br />2-26 Elogia defunctorum <br />26-36 Cultus numinis procuratus etc. <br />36-41 Cultus B.V. eiusque favores <br />41-44 Cultus et favores aliorum sanctorum <br />44-47 SS Ignatii et Francisci Xaverii aliorumque ex societate coelitum cultus procuratuset
-                  promotus <br />47-54 S. Ignatii favores <br />54-60 S. Xaveri et Francisci Borgiae favores <br />60-63 Concio et catechesis <br />63-66 Usus sacramenti paenitentiae <br />67-72 Fructus religiosae conversationis cum proximo <br />72-85 Abducti a variis erroribus <br />85-89 Sodalitates externorum <br />89-92 Sodalitates studiosirum <br />92-96 Scholae <br />96-98 Religiosi facti et clerici in vineam domini missi <br />98-99 Exercitia sancti patris externi cum fructu tradita <br />99-102 Aegrorum et pauperum cura <br />102-105 Cura carcerum et reorum mortis <br />105-114 Propria missionum <br />114-119 Res temporales <br />119-124 Benevoli et erga illos gratitudo <br />I*r-I*r <a href="https://jesuiten-oenb.github.io/jesuiten-static/jesuiten_place__68.html">Leopoldov</a><br />I*r-I*r <a href="https://jesuiten-oenb.github.io/jesuiten-static/jesuiten_org__37.html">Jesuitenkolleg Judenburg</a><br />I*r-I*r <a href="https://jesuiten-oenb.github.io/jesuiten-static/jesuiten_place__6.html">Trnava</a><br />I*r-I*v <a href="https://jesuiten-oenb.github.io/jesuiten-static/jesuiten_place__13.html">Sopron</a><br />I*v-I*v <a href="https://jesuiten-oenb.github.io/jesuiten-static/jesuiten_place__30.html">Varaždin</a><br />I*v-II*r <a href="https://jesuiten-oenb.github.io/jesuiten-static/jesuiten_place__27.html">Gorizia</a><br />II*r-II*v <a href="https://jesuiten-oenb.github.io/jesuiten-static/jesuiten_org__40.html">Jesuitenkolleg Rijeka</a><br /><ul>
-                     <li><a href="https://jesuiten-oenb.github.io/jesuiten-static/jesuiten_org__1.html">Profeßhaus Wien</a></li>
-                     <li><a href="https://jesuiten-oenb.github.io/jesuiten-static/jesuiten_org__2.html">Jesuitenkolleg Wien</a></li>
-                     <li><a href="https://jesuiten-oenb.github.io/jesuiten-static/jesuiten_org__4.html">Probationshaus Wien</a></li>
-                     <li><a href="https://jesuiten-oenb.github.io/jesuiten-static/jesuiten_org__5.html">Jesuitenkolleg Graz</a></li>
-                     <li><a href="https://jesuiten-oenb.github.io/jesuiten-static/jesuiten_org__8.html">Jesuitenkolleg Linz</a></li>
-                     <li><a href="https://jesuiten-oenb.github.io/jesuiten-static/jesuiten_org__9.html">Jesuitenkolleg Bratislava</a></li>
-                     <li><a href="https://jesuiten-oenb.github.io/jesuiten-static/jesuiten_org__10.html">Jesuitenkolleg Passau</a></li>
-                     <li><a href="https://jesuiten-oenb.github.io/jesuiten-static/jesuiten_org__11.html">Jesuitenkolleg Trnava</a></li>
-                     <li><a href="https://jesuiten-oenb.github.io/jesuiten-static/jesuiten_org__12.html">Jesuitenkolleg Győr</a></li>
-                     <li><a href="https://jesuiten-oenb.github.io/jesuiten-static/jesuiten_org__13.html">Jesuitenkolleg Ljubljana</a></li>
-                     <li><a href="https://jesuiten-oenb.github.io/jesuiten-static/jesuiten_org__16.html">Jesuitenkolleg Klagenfurt</a></li>
-                     <li><a href="https://jesuiten-oenb.github.io/jesuiten-static/jesuiten_org__18.html">Jesuitenkolleg Zagreb</a></li>
-                     <li><a href="https://jesuiten-oenb.github.io/jesuiten-static/jesuiten_org__35.html">Jesuitenkolleg Krems</a></li>
-                     <li><a href="https://jesuiten-oenb.github.io/jesuiten-static/jesuiten_org__36.html">Jesuitenkolleg Gorizia</a></li>
-                     <li><a href="https://jesuiten-oenb.github.io/jesuiten-static/jesuiten_org__37.html">Jesuitenkolleg Judenburg</a></li>
-                     <li><a href="https://jesuiten-oenb.github.io/jesuiten-static/jesuiten_org__38.html">Jesuitenkolleg Trieste</a></li>
-                     <li><a href="https://jesuiten-oenb.github.io/jesuiten-static/jesuiten_org__39.html">Probationshaus Leoben</a></li>
-                     <li><a href="https://jesuiten-oenb.github.io/jesuiten-static/jesuiten_org__40.html">Jesuitenkolleg Rijeka</a></li>
-                     <li><a href="https://jesuiten-oenb.github.io/jesuiten-static/jesuiten_org__44.html">Jesuitenresidenz Varaždin</a></li>
-                     <li><a href="https://jesuiten-oenb.github.io/jesuiten-static/jesuiten_org__53.html">Jesuitenkolleg Steyr</a></li>
-                     <li><a href="https://jesuiten-oenb.github.io/jesuiten-static/jesuiten_org__79.html">Jesuitenkolleg Košice</a></li>
-                     <li><a href="https://jesuiten-oenb.github.io/jesuiten-static/jesuiten_org__81.html">Jesuitenkolleg Banská Bystrica</a></li>
-                     <li><a href="https://jesuiten-oenb.github.io/jesuiten-static/jesuiten_org__84.html">Jesuitenkolleg Levoča</a></li>
-                     <li><a href="https://jesuiten-oenb.github.io/jesuiten-static/jesuiten_org__87.html">Jesuitenkolleg Sopron</a></li>
-                     <li><a href="https://jesuiten-oenb.github.io/jesuiten-static/jesuiten_org__89.html">Jesuitenkolleg Trenčín</a></li>
-                     <li><a href="https://jesuiten-oenb.github.io/jesuiten-static/jesuiten_org__291.html">Jesuitenkolleg Wiener Neustadt</a></li>
-                     <li><a href="https://jesuiten-oenb.github.io/jesuiten-static/jesuiten_org__292.html">Jesuitenkolleg Uzhhorod</a></li>
-                     <li><a href="https://jesuiten-oenb.github.io/jesuiten-static/jesuiten_org__37.html">Jesuitenkolleg Judenburg</a></li>
-                     <li><a href="https://jesuiten-oenb.github.io/jesuiten-static/jesuiten_org__40.html">Jesuitenkolleg Rijeka</a></li>
-                     <li><a href="https://jesuiten-oenb.github.io/jesuiten-static/.html">Jesuitenkolleg Ljubljana</a></li>
-                     <li><a href="https://jesuiten-oenb.github.io/jesuiten-static/.html">Jesuitenkolleg Trieste</a></li>
-                     <li><a href="https://jesuiten-oenb.github.io/jesuiten-static/.html">Jesuitenkolleg Zagreb</a></li>
-                     <li><a href="https://jesuiten-oenb.github.io/jesuiten-static/.html">Jesuitenkolleg Levoča</a></li>
-                     <li><a href="https://jesuiten-oenb.github.io/jesuiten-static/.html">Jesuitenkolleg Trnava</a></li>
-                     <li><a href="https://jesuiten-oenb.github.io/jesuiten-static/.html">Probationshaus Wien</a></li>
-                     <li><a href="https://jesuiten-oenb.github.io/jesuiten-static/.html">Jesuitenkolleg Győr</a></li>
-                     <li><a href="https://jesuiten-oenb.github.io/jesuiten-static/.html">Jesuitenkolleg Linz</a></li>
-                     <li><a href="https://jesuiten-oenb.github.io/jesuiten-static/.html">Profeßhaus Wien</a></li>
-                     <li><a href="https://jesuiten-oenb.github.io/jesuiten-static/.html">Jesuitenkolleg Gorizia</a></li>
-                     <li><a href="https://jesuiten-oenb.github.io/jesuiten-static/.html">Jesuitenkolleg Krems</a></li>
-                     <li><a href="https://jesuiten-oenb.github.io/jesuiten-static/.html">Jesuitenresidenz Varaždin</a></li>
-                     <li><a href="https://jesuiten-oenb.github.io/jesuiten-static/.html">Jesuitenkolleg Trenčín</a></li>
-                     <li><a href="https://jesuiten-oenb.github.io/jesuiten-static/.html">Jesuitenkolleg Klagenfurt</a></li>
-                     <li><a href="https://jesuiten-oenb.github.io/jesuiten-static/.html">Jesuitenkolleg Banská Bystrica</a></li>
-                     <li><a href="https://jesuiten-oenb.github.io/jesuiten-static/.html">Jesuitenkolleg Steyr</a></li>
-                     <li><a href="https://jesuiten-oenb.github.io/jesuiten-static/.html">Jesuitenkolleg Rijeka</a></li>
-                     <li><a href="https://jesuiten-oenb.github.io/jesuiten-static/.html">Jesuitenkolleg Košice</a></li>
-                     <li><a href="https://jesuiten-oenb.github.io/jesuiten-static/.html">Jesuitenkolleg Sopron</a></li>
-                     <li><a href="https://jesuiten-oenb.github.io/jesuiten-static/.html">Jesuitenkolleg Graz</a></li>
-                     <li><a href="https://jesuiten-oenb.github.io/jesuiten-static/.html">Jesuitenkolleg Wiener Neustadt</a></li>
-                     <li><a href="https://jesuiten-oenb.github.io/jesuiten-static/.html">Jesuitenkolleg Bratislava</a></li>
-                     <li><a href="https://jesuiten-oenb.github.io/jesuiten-static/.html">Jesuitenkolleg Wien</a></li>
-                     <li><a href="https://jesuiten-oenb.github.io/jesuiten-static/.html">Jesuitenkolleg Judenburg</a></li>
-                     <li><a href="https://jesuiten-oenb.github.io/jesuiten-static/.html">Jesuitenkolleg Passau</a></li>
-                     <li><a href="https://jesuiten-oenb.github.io/jesuiten-static/.html">Probationshaus Leoben</a></li>
-                     <li><a href="https://jesuiten-oenb.github.io/jesuiten-static/.html">Jesuitenkolleg Uzhhorod</a></li>
+                  promotus <br />47-54 S. Ignatii favores <br />54-60 S. Xaveri et Francisci Borgiae favores <br />60-63 Concio et catechesis <br />63-66 Usus sacramenti paenitentiae <br />67-72 Fructus religiosae conversationis cum proximo <br />72-85 Abducti a variis erroribus <br />85-89 Sodalitates externorum <br />89-92 Sodalitates studiosirum <br />92-96 Scholae <br />96-98 Religiosi facti et clerici in vineam domini missi <br />98-99 Exercitia sancti patris externi cum fructu tradita <br />99-102 Aegrorum et pauperum cura <br />102-105 Cura carcerum et reorum mortis <br />105-114 Propria missionum <br />114-119 Res temporales <br />119-124 Benevoli et erga illos gratitudo <br />I*r-I*r <a href="https://jesuiten-oenb.github.io/jesuiten-static/jesuiten_place__68.html">Leopoldov</a><br />I*r-I*r <a href="https://jesuiten-oenb.github.io/jesuiten-static/jesuiten_org__37.html">Jesuitenkolleg Judenburg</a><br />I*r-I*r <a href="https://jesuiten-oenb.github.io/jesuiten-static/jesuiten_place__6.html">Trnava</a><br />I*r-I*v <a href="https://jesuiten-oenb.github.io/jesuiten-static/jesuiten_place__13.html">Sopron</a><br />I*v-I*v <a href="https://jesuiten-oenb.github.io/jesuiten-static/jesuiten_place__30.html">Varaždin</a><br />I*v-II*r <a href="https://jesuiten-oenb.github.io/jesuiten-static/jesuiten_place__27.html">Gorizia</a><br />II*r-II*v <a href="https://jesuiten-oenb.github.io/jesuiten-static/jesuiten_org__40.html">Jesuitenkolleg Rijeka</a><br /><ul class="collapsible" onclick="toggleList('orgList')">
+                     <li>Im Text erwähnte Körperschaften:</li>
+                     <ul class="content" id="orgList">
+                        <li><a href="https://jesuiten-oenb.github.io/jesuiten-static/jesuiten_org__1.html">Profeßhaus Wien</a></li>
+                        <li><a href="https://jesuiten-oenb.github.io/jesuiten-static/jesuiten_org__2.html">Jesuitenkolleg Wien</a></li>
+                        <li><a href="https://jesuiten-oenb.github.io/jesuiten-static/jesuiten_org__4.html">Probationshaus Wien</a></li>
+                        <li><a href="https://jesuiten-oenb.github.io/jesuiten-static/jesuiten_org__5.html">Jesuitenkolleg Graz</a></li>
+                        <li><a href="https://jesuiten-oenb.github.io/jesuiten-static/jesuiten_org__8.html">Jesuitenkolleg Linz</a></li>
+                        <li><a href="https://jesuiten-oenb.github.io/jesuiten-static/jesuiten_org__9.html">Jesuitenkolleg Bratislava</a></li>
+                        <li><a href="https://jesuiten-oenb.github.io/jesuiten-static/jesuiten_org__10.html">Jesuitenkolleg Passau</a></li>
+                        <li><a href="https://jesuiten-oenb.github.io/jesuiten-static/jesuiten_org__11.html">Jesuitenkolleg Trnava</a></li>
+                        <li><a href="https://jesuiten-oenb.github.io/jesuiten-static/jesuiten_org__12.html">Jesuitenkolleg Győr</a></li>
+                        <li><a href="https://jesuiten-oenb.github.io/jesuiten-static/jesuiten_org__13.html">Jesuitenkolleg Ljubljana</a></li>
+                        <li><a href="https://jesuiten-oenb.github.io/jesuiten-static/jesuiten_org__16.html">Jesuitenkolleg Klagenfurt</a></li>
+                        <li><a href="https://jesuiten-oenb.github.io/jesuiten-static/jesuiten_org__18.html">Jesuitenkolleg Zagreb</a></li>
+                        <li><a href="https://jesuiten-oenb.github.io/jesuiten-static/jesuiten_org__35.html">Jesuitenkolleg Krems</a></li>
+                        <li><a href="https://jesuiten-oenb.github.io/jesuiten-static/jesuiten_org__36.html">Jesuitenkolleg Gorizia</a></li>
+                        <li><a href="https://jesuiten-oenb.github.io/jesuiten-static/jesuiten_org__37.html">Jesuitenkolleg Judenburg</a></li>
+                        <li><a href="https://jesuiten-oenb.github.io/jesuiten-static/jesuiten_org__38.html">Jesuitenkolleg Trieste</a></li>
+                        <li><a href="https://jesuiten-oenb.github.io/jesuiten-static/jesuiten_org__39.html">Probationshaus Leoben</a></li>
+                        <li><a href="https://jesuiten-oenb.github.io/jesuiten-static/jesuiten_org__40.html">Jesuitenkolleg Rijeka</a></li>
+                        <li><a href="https://jesuiten-oenb.github.io/jesuiten-static/jesuiten_org__44.html">Jesuitenresidenz Varaždin</a></li>
+                        <li><a href="https://jesuiten-oenb.github.io/jesuiten-static/jesuiten_org__53.html">Jesuitenkolleg Steyr</a></li>
+                        <li><a href="https://jesuiten-oenb.github.io/jesuiten-static/jesuiten_org__79.html">Jesuitenkolleg Košice</a></li>
+                        <li><a href="https://jesuiten-oenb.github.io/jesuiten-static/jesuiten_org__81.html">Jesuitenkolleg Banská Bystrica</a></li>
+                        <li><a href="https://jesuiten-oenb.github.io/jesuiten-static/jesuiten_org__84.html">Jesuitenkolleg Levoča</a></li>
+                        <li><a href="https://jesuiten-oenb.github.io/jesuiten-static/jesuiten_org__87.html">Jesuitenkolleg Sopron</a></li>
+                        <li><a href="https://jesuiten-oenb.github.io/jesuiten-static/jesuiten_org__89.html">Jesuitenkolleg Trenčín</a></li>
+                        <li><a href="https://jesuiten-oenb.github.io/jesuiten-static/jesuiten_org__291.html">Jesuitenkolleg Wiener Neustadt</a></li>
+                        <li><a href="https://jesuiten-oenb.github.io/jesuiten-static/jesuiten_org__292.html">Jesuitenkolleg Uzhhorod</a></li>
+                     </ul>
                   </ul>
                   <ul>
                      <li><a href="https://jesuiten-oenb.github.io/jesuiten-static/jesuiten_place__68.html">Leopoldov</a></li>
