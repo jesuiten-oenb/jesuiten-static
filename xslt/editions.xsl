@@ -110,12 +110,12 @@
                                         </xsl:if>
                                     </div>
                                 </div>
-                                <div id="editor-widget">
+                                <!--<div id="editor-widget">
                                     <p>Text Editor</p>
                                     <xsl:call-template name="annotation-options"></xsl:call-template>
-                                </div>
+                                </div>-->
                             </div>
-                            <div class="btn-group">	                                
+                            <div class="d-grid gap-2 d-md-block">	                                
                                 <xsl:choose>
                                     <xsl:when test="//tei:msDesc/tei:head/tei:note[@type='facs']">
                                         <a class="btn btn-outline-dark" href="{//tei:msDesc/tei:head/tei:note[@type='facs']/tei:ref/@target}"  target="_blank" title="opens in a new tab">
@@ -157,56 +157,37 @@
                                         <br/>
                                     </xsl:for-each>
                                 </xsl:if>
-                                <xsl:if test=".//tei:listOrg">
-                                    
+                                <xsl:if test=".//tei:listOrg">                                    
                                     <xsl:apply-templates select=".//tei:listOrg/tei:head"/>
                                     <ul class="collapsible" onclick="toggleList('orgList')">
-                                        <li>Im Text erwähnte Körperschaften:</li>
+                                        <button type="button" class="btn btn-outline-dark">Im Text erwähnte Körperschaften:</button>                                       
                                         <ul class="content" id="orgList">
-                                            <!-- Use the xsl:for-each-group as previously explained -->
                                             <xsl:for-each-group select=".//tei:org" group-by=".//tei:orgName[not(@type='alt')]">
+                                                <xsl:sort select=".//tei:orgName[not(@type='alt')]" />
                                                 <li>
                                                     <xsl:apply-templates select="current-group()[1]//tei:orgName[not(@type='alt')]"/>
                                                 </li>
                                             </xsl:for-each-group>
                                         </ul>
                                     </ul>
-                                </xsl:if>
-                                
+                                </xsl:if>                               
                                 
                                 <xsl:if test=".//tei:listPlace">
                                     <xsl:apply-templates select=".//tei:listPlace/tei:head"/>
-                                    <ul>
-                                        <xsl:for-each select=".//tei:place">
-                                            <li><xsl:apply-templates select=".//tei:placeName"></xsl:apply-templates></li>
-                                        </xsl:for-each> 
+                                    <ul class="collapsible" onclick="toggleList('placeList')">
+                                        <button type="button" class="btn btn-outline-dark">Im Text erwähnte Orte:</button>
+                                        <ul class="content" id="placeList">
+                                            <xsl:for-each-group select=".//tei:place" group-by=".//tei:placeName[not(@type='alt')]">
+                                                <xsl:sort select=".//tei:placeName[not(@type='alt')]" />
+                                                <li>
+                                                    <xsl:apply-templates select="current-group()[1]//tei:placeName[not(@type='alt')]"/>
+                                                </li>
+                                            </xsl:for-each-group>
+                                        </ul>                                         
                                     </ul>
                                 </xsl:if>
                             </div>
-                            <!--<div class="card-footer">
-                                <p style="text-align:center;">
-                                    <xsl:for-each select=".//tei:note[not(./tei:p)]">
-                                        <div class="footnotes" id="{local:makeId(.)}">
-                                            <xsl:element name="a">
-                                                <xsl:attribute name="name">
-                                                    <xsl:text>fn</xsl:text>
-                                                    <xsl:number level="any" format="1" count="tei:note"/>
-                                                </xsl:attribute>
-                                                <a>
-                                                    <xsl:attribute name="href">
-                                                        <xsl:text>#fna_</xsl:text>
-                                                        <xsl:number level="any" format="1" count="tei:note"/>
-                                                    </xsl:attribute>
-                                                    <span style="font-size:7pt;vertical-align:super; margin-right: 0.4em">
-                                                        <xsl:number level="any" format="1" count="tei:note"/>
-                                                    </span>
-                                                </a>
-                                            </xsl:element>
-                                            <xsl:apply-templates/>
-                                        </div>
-                                    </xsl:for-each>
-                                </p>
-                            </div>-->
+                            
                         </div>                       
                     </div>
                     <xsl:for-each select="//tei:back">
