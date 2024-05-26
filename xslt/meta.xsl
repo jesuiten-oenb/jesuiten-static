@@ -43,10 +43,33 @@
     <xsl:template match="tei:lb">
         <br/>
     </xsl:template>
-    <xsl:template match="tei:unclear">
-        <abbr title="unclear"><xsl:apply-templates/></abbr>
+
+     <xsl:template match="tei:div//tei:head">
+        <h2 id="{generate-id()}"><xsl:apply-templates/></h2>
     </xsl:template>
-    <xsl:template match="tei:del">
-        <del><xsl:apply-templates/></del>
-    </xsl:template>    
+
+    <xsl:template match="tei:figure">
+        <div class="text-center">
+            <figure class="figure">
+                <img src="{tei:graphic/@url}" class="figure-img img-fluid rounded" alt=""/>
+                <figcaption class="figure-caption text-end"><xsl:value-of select="tei:figDesc"/></figcaption>
+            </figure>
+        </div>
+    </xsl:template>
+
+    <xsl:template match="tei:ref">
+        <xsl:choose>
+            <xsl:when test="starts-with(data(@target), 'http')">
+                <a>
+                    <xsl:attribute name="href"><xsl:value-of select="@target"/></xsl:attribute>
+                    <xsl:value-of select="."/>
+                </a>
+            </xsl:when>
+            <xsl:otherwise>
+                <xsl:apply-templates/>
+            </xsl:otherwise>
+        </xsl:choose>
+    </xsl:template>
+
+
 </xsl:stylesheet>
