@@ -13,5 +13,3 @@ mv ./baserow-entities-main/data/meta/ ./data
 
 rm main.zip
 rm -rf ./baserow-entities-main
-
-./shellscripts/dl_imprint.sh
