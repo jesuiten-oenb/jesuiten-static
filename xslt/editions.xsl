@@ -82,19 +82,19 @@
                                 </xsl:if>
                             </div>                            
                         </div>
-                        <div >	                                
+                        <div class="btn-group">	                                
                             <xsl:choose>
                                 <xsl:when test="//tei:msDesc/tei:head/tei:note[@type='facs']">
                                     <a class="btn btn-outline-dark" href="{//tei:msDesc/tei:head/tei:note[@type='facs']/tei:ref/@target}"  target="_blank" title="opens in a new tab">
                                         <xsl:value-of select="//tei:msDesc/tei:head/tei:note[@type='facs']/tei:ref"/>
-                                        <xsl:text>Digital facsimile</xsl:text>
+                                        <xsl:text>Facsimile</xsl:text>
                                     </a>
                                 </xsl:when>
                             </xsl:choose>
                             <xsl:choose>
                                 <xsl:when test="//tei:msDesc/tei:head/tei:note[@type='catalogue']">
                                     <a class="btn btn-outline-dark" href="{//tei:msDesc/tei:head/tei:note[@type='catalogue']/tei:ref/@target}"  target="_blank" title="opens in a new tab">
-                                        <xsl:text>Library catalogue</xsl:text>
+                                        <xsl:text>ÖNB Katalog</xsl:text>
                                     </a>
                                 </xsl:when>
                             </xsl:choose>                                 
@@ -102,7 +102,7 @@
                         </div>
                         <div class="card-body"> 
                             
-                            <xsl:text>Codex &#8212; </xsl:text><xsl:apply-templates select=".//tei:support"/><xsl:text> &#8212; </xsl:text><xsl:apply-templates select=".//tei:extent/tei:measure"/><xsl:text> &#8212; </xsl:text><xsl:apply-templates select=".//tei:dimensions/tei:height"/><xsl:text>×</xsl:text><xsl:apply-templates select=".//tei:dimensions/tei:width"></xsl:apply-templates><xsl:text> mm &#8212; </xsl:text><xsl:apply-templates select=".//tei:head/origDate"/><br/>
+                            <xsl:text>Codex &#8212; </xsl:text><xsl:apply-templates select=".//tei:support"/><xsl:text> &#8212; </xsl:text><xsl:apply-templates select=".//tei:extent/tei:measure"/><xsl:text> &#8212; </xsl:text><xsl:apply-templates select=".//tei:dimensions/tei:height"/><xsl:text>×</xsl:text><xsl:apply-templates select=".//tei:dimensions/tei:width"></xsl:apply-templates><xsl:text> mm &#8212; </xsl:text><xsl:apply-templates select=".//tei:head/tei:origDate"/><br/>
                             
                             <h2><xsl:apply-templates select=".//tei:head/tei:title"></xsl:apply-templates></h2> 
                             <p><xsl:apply-templates select=".//tei:msContents/tei:summary/text()[normalize-space()]"></xsl:apply-templates></p>
@@ -111,28 +111,33 @@
                             <xsl:apply-templates select=".//tei:foliation"></xsl:apply-templates><br/>
                             <xsl:apply-templates select=".//tei:binding"></xsl:apply-templates>                                
                             <xsl:choose>
-                                <xsl:when test=".//tei:accMat != ''">
+                                <xsl:when test=".//tei:accMat != 'None'">
                                     <xsl:apply-templates select=".//tei:accMat"></xsl:apply-templates>
                                 </xsl:when>
                             </xsl:choose>                                    
                                                         
                             <xsl:if test=".//tei:msItem">
-                                <h2><xsl:text>Inhalt</xsl:text></h2>
-                                <xsl:for-each select=".//tei:msItem">                                        
-                                    <xsl:apply-templates select="./tei:locus"/><xsl:text> </xsl:text>
-                                    <xsl:apply-templates select="./tei:title"/>
-                                    <xsl:apply-templates select=".//tei:orgName"/>
-                                    <xsl:apply-templates select=".//tei:placeName"/>
-                                    <xsl:if test=".//tei:date">
-                                        <xsl:text> (a. </xsl:text><xsl:apply-templates select=".//tei:date"/><xsl:text>)</xsl:text>
-                                    </xsl:if>
-                                    <br/>
-                                </xsl:for-each>
+                                <div>
+                                    <h2><xsl:text>Inhalt</xsl:text></h2>
+                                    <ul>
+                                       <xsl:for-each select=".//tei:msItem">
+                                           <li>
+                                        <xsl:apply-templates select="./tei:locus"/><xsl:text> </xsl:text>
+                                        <xsl:apply-templates select="./tei:title"/>
+                                        <xsl:apply-templates select=".//tei:orgName"/>
+                                        <xsl:apply-templates select=".//tei:placeName"/>
+                                        
+                                               <xsl:if test=".//tei:date != '0'">
+                                            <xsl:text> (a. </xsl:text><xsl:apply-templates select=".//tei:date"/><xsl:text>)</xsl:text>
+                                        </xsl:if></li>
+                                    </xsl:for-each> 
+                                    </ul>
+                                    
+                                    
+                                </div>
                             </xsl:if>
                             <xsl:if test=".//tei:listOrg">                                    
-                                <xsl:apply-templates select=".//tei:listOrg/tei:head"/>
-                                <ul class="collapsible" onclick="toggleList('orgList')">
-                                    <button type="button" class="btn btn-outline-dark">Im Text erwähnte Körperschaften:</button>                                       
+                                <xsl:apply-templates select=".//tei:listOrg/tei:head"/>                                                                           
                                     <ul class="content" id="orgList">
                                         <xsl:for-each-group select=".//tei:org" group-by=".//tei:orgName[not(@type='alt')]">
                                             <xsl:sort select=".//tei:orgName[not(@type='alt')]" />
@@ -141,13 +146,11 @@
                                             </li>
                                         </xsl:for-each-group>
                                     </ul>
-                                </ul>
+                                
                             </xsl:if>                               
                             
                             <xsl:if test=".//tei:listPlace">
-                                <xsl:apply-templates select=".//tei:listPlace/tei:head"/>
-                                <ul class="collapsible" onclick="toggleList('placeList')">
-                                    <button type="button" class="btn btn-outline-dark">Im Text erwähnte Orte:</button>
+                                <xsl:apply-templates select=".//tei:listPlace/tei:head"/>                               
                                     <ul class="content" id="placeList">
                                         <xsl:for-each-group select=".//tei:place" group-by=".//tei:placeName[not(@type='alt')]">
                                             <xsl:sort select=".//tei:placeName[not(@type='alt')]" />
@@ -156,32 +159,9 @@
                                             </li>
                                         </xsl:for-each-group>
                                     </ul>                                         
-                                </ul>
                             </xsl:if>
                         </div>
-                        <xsl:apply-templates select=".//tei:body"></xsl:apply-templates>
-                        <!--<p style="text-align:center;">
-                            <xsl:for-each select=".//tei:note[not(./tei:p)]">
-                                <div class="footnotes" id="{local:makeId(.)}">
-                                    <xsl:element name="a">
-                                        <xsl:attribute name="name">
-                                            <xsl:text>fn</xsl:text>
-                                            <xsl:number level="any" format="1" count="tei:note"/>
-                                        </xsl:attribute>
-                                        <a>
-                                            <xsl:attribute name="href">
-                                                <xsl:text>#fna_</xsl:text>
-                                                <xsl:number level="any" format="1" count="tei:note"/>
-                                            </xsl:attribute>
-                                            <span style="font-size:7pt;vertical-align:super; margin-right: 0.4em">
-                                                <xsl:number level="any" format="1" count="tei:note"/>
-                                            </span>
-                                        </a>
-                                    </xsl:element>
-                                    <xsl:apply-templates/>
-                                </div>
-                            </xsl:for-each>
-                        </p>-->
+                                               
 
                     </div>
                     <xsl:for-each select="//tei:back">
@@ -196,5 +176,12 @@
                 <script type="text/javascript" src="js/run.js"></script>
             </body>
         </html>
+    </xsl:template>
+    <xsl:variable name='site'>https://jesuiten-oenb.github.io/jesuiten-static/</xsl:variable>
+    <xsl:template match="tei:placeName">
+        <a href="{concat($site, replace(./@key, '#', ''), '.html')}"><xsl:apply-templates/></a>       
+    </xsl:template>
+    <xsl:template match="tei:orgName">
+        <a href="{concat($site, replace(./@key, '#', ''), '.html')}"><xsl:apply-templates/></a>       
     </xsl:template>
 </xsl:stylesheet>
