@@ -42,7 +42,7 @@
                     }
                 </style>
             </head>
-            <body class="d-flex flex-column h-100">
+             <body class="d-flex flex-column h-100">
                 <xsl:call-template name="nav_bar"/>
                 <main class="flex-shrink-0">
                     <div class="container">
@@ -54,7 +54,7 @@
                                             <xsl:attribute name="href">
                                                 <xsl:value-of select="$prev"/>
                                             </xsl:attribute>
-                                            <i class="bi bi-chevron-left" title="zurück"/>
+                                            <i class="bi bi-chevron-left" title="vorrige"/>
                                         </a>
                                     </h1>
                                 </xsl:if>
@@ -76,17 +76,91 @@
                                             <xsl:attribute name="href">
                                                 <xsl:value-of select="$next"/>
                                             </xsl:attribute>
-                                            <i class="bi bi-chevron-right" title="weiter"/>
+                                            <i class="bi bi-chevron-right" title="nächste"/>
                                         </a>
                                     </h1>
                                 </xsl:if>
-                            </div>
-                            <div id="editor-widget">
-                                <xsl:call-template name="annotation-options"></xsl:call-template>
-                            </div>
+                            </div>                            
+                        </div>
+                        <div >	                                
+                            <xsl:choose>
+                                <xsl:when test="//tei:msDesc/tei:head/tei:note[@type='facs']">
+                                    <a class="btn btn-outline-dark" href="{//tei:msDesc/tei:head/tei:note[@type='facs']/tei:ref/@target}"  target="_blank" title="opens in a new tab">
+                                        <xsl:value-of select="//tei:msDesc/tei:head/tei:note[@type='facs']/tei:ref"/>
+                                        <xsl:text>Digital facsimile</xsl:text>
+                                    </a>
+                                </xsl:when>
+                            </xsl:choose>
+                            <xsl:choose>
+                                <xsl:when test="//tei:msDesc/tei:head/tei:note[@type='catalogue']">
+                                    <a class="btn btn-outline-dark" href="{//tei:msDesc/tei:head/tei:note[@type='catalogue']/tei:ref/@target}"  target="_blank" title="opens in a new tab">
+                                        <xsl:text>Library catalogue</xsl:text>
+                                    </a>
+                                </xsl:when>
+                            </xsl:choose>                                 
+                            
+                        </div>
+                        <div class="card-body"> 
+                            
+                            <xsl:text>Codex &#8212; </xsl:text><xsl:apply-templates select=".//tei:support"/><xsl:text> &#8212; </xsl:text><xsl:apply-templates select=".//tei:extent/tei:measure"/><xsl:text> &#8212; </xsl:text><xsl:apply-templates select=".//tei:dimensions/tei:height"/><xsl:text>×</xsl:text><xsl:apply-templates select=".//tei:dimensions/tei:width"></xsl:apply-templates><xsl:text> mm &#8212; </xsl:text><xsl:apply-templates select=".//tei:head/origDate"/><br/>
+                            
+                            <h2><xsl:apply-templates select=".//tei:head/tei:title"></xsl:apply-templates></h2> 
+                            <p><xsl:apply-templates select=".//tei:msContents/tei:summary/text()[normalize-space()]"></xsl:apply-templates></p>
+                            
+                            <h2><xsl:text>Äußeres</xsl:text></h2>
+                            <xsl:apply-templates select=".//tei:foliation"></xsl:apply-templates><br/>
+                            <xsl:apply-templates select=".//tei:binding"></xsl:apply-templates>                                
+                            <xsl:choose>
+                                <xsl:when test=".//tei:accMat != ''">
+                                    <xsl:apply-templates select=".//tei:accMat"></xsl:apply-templates>
+                                </xsl:when>
+                            </xsl:choose>                                    
+                                                        
+                            <xsl:if test=".//tei:msItem">
+                                <h2><xsl:text>Inhalt</xsl:text></h2>
+                                <xsl:for-each select=".//tei:msItem">                                        
+                                    <xsl:apply-templates select="./tei:locus"/><xsl:text> </xsl:text>
+                                    <xsl:apply-templates select="./tei:title"/>
+                                    <xsl:apply-templates select=".//tei:orgName"/>
+                                    <xsl:apply-templates select=".//tei:placeName"/>
+                                    <xsl:if test=".//tei:date">
+                                        <xsl:text> (a. </xsl:text><xsl:apply-templates select=".//tei:date"/><xsl:text>)</xsl:text>
+                                    </xsl:if>
+                                    <br/>
+                                </xsl:for-each>
+                            </xsl:if>
+                            <xsl:if test=".//tei:listOrg">                                    
+                                <xsl:apply-templates select=".//tei:listOrg/tei:head"/>
+                                <ul class="collapsible" onclick="toggleList('orgList')">
+                                    <button type="button" class="btn btn-outline-dark">Im Text erwähnte Körperschaften:</button>                                       
+                                    <ul class="content" id="orgList">
+                                        <xsl:for-each-group select=".//tei:org" group-by=".//tei:orgName[not(@type='alt')]">
+                                            <xsl:sort select=".//tei:orgName[not(@type='alt')]" />
+                                            <li>
+                                                <xsl:apply-templates select="current-group()[1]//tei:orgName[not(@type='alt')]"/>
+                                            </li>
+                                        </xsl:for-each-group>
+                                    </ul>
+                                </ul>
+                            </xsl:if>                               
+                            
+                            <xsl:if test=".//tei:listPlace">
+                                <xsl:apply-templates select=".//tei:listPlace/tei:head"/>
+                                <ul class="collapsible" onclick="toggleList('placeList')">
+                                    <button type="button" class="btn btn-outline-dark">Im Text erwähnte Orte:</button>
+                                    <ul class="content" id="placeList">
+                                        <xsl:for-each-group select=".//tei:place" group-by=".//tei:placeName[not(@type='alt')]">
+                                            <xsl:sort select=".//tei:placeName[not(@type='alt')]" />
+                                            <li>
+                                                <xsl:apply-templates select="current-group()[1]//tei:placeName[not(@type='alt')]"/>
+                                            </li>
+                                        </xsl:for-each-group>
+                                    </ul>                                         
+                                </ul>
+                            </xsl:if>
                         </div>
                         <xsl:apply-templates select=".//tei:body"></xsl:apply-templates>
-                        <p style="text-align:center;">
+                        <!--<p style="text-align:center;">
                             <xsl:for-each select=".//tei:note[not(./tei:p)]">
                                 <div class="footnotes" id="{local:makeId(.)}">
                                     <xsl:element name="a">
@@ -107,7 +181,7 @@
                                     <xsl:apply-templates/>
                                 </div>
                             </xsl:for-each>
-                        </p>
+                        </p>-->
 
                     </div>
                     <xsl:for-each select="//tei:back">
