@@ -28,13 +28,15 @@
             <xsl:call-template name="nav_bar"/>
                 <main>
                     <div class="container">
-                        <h1>Inhaltsverzeichnis</h1>
+                        <h1>Handschriftenliste</h1>
                         <table id="myTable">
                             <thead>
                                 <tr>
                                     <th scope="col" width="20" tabulator-formatter="html" tabulator-headerSort="false" tabulator-download="false">#</th>
+                                    <th scope="col"  tabulator-formatter="html" tabulator-headerFilter="input">Signatur</th>
                                     <th scope="col" tabulator-headerFilter="input">Titel</th>
-                                    <th scope="col" tabulator-headerFilter="input">Dateinname</th>
+                                    <th scope="col" width="120" tabulator-headerFilter="input">Jahr</th>
+                                    <th scope="col" width="80" tabulator-formatter="html"  tabulator-headerSort="false" tabulator-download="false">Facsimile</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -55,12 +57,31 @@
                                             </a>
                                         </td>
                                         <td>
-                                            <xsl:value-of
-                                                select=".//tei:titleStmt/tei:title[1]/text()"/>
+                                            <a>
+                                                <xsl:attribute name="href">
+                                                    <xsl:value-of
+                                                        select="replace(tokenize($full_path, '/')[last()], '.xml', '.html')"
+                                                    />
+                                                </xsl:attribute>
+                                                <xsl:value-of
+                                                    select=".//tei:titleStmt/tei:title[1]/text()"/>
+                                            </a>
+                                            
                                         </td>
                                         <td>
-                                            <xsl:value-of select="tokenize($full_path, '/')[last()]"
+                                            <xsl:value-of
+                                                select=".//tei:head/tei:title[1]/text()"/>
                                             />
+                                        </td>
+                                        <td>
+                                            <xsl:value-of
+                                                select=".//tei:head/tei:date[1]/text()"/>
+                                        </td>
+                                        <td>
+                                            <a href="{.//tei:head/tei:note[@type='facs']/tei:ref/@target}" target="blank" title="opens in a new tab">  
+                                                
+                                                <i class="bi bi-box-arrow-up-right"/>
+                                            </a>
                                         </td>
                                     </tr>
                                 </xsl:for-each>
