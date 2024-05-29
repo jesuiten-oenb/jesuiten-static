@@ -78,10 +78,11 @@
                                                 select=".//tei:head/tei:date[1]/text()"/>
                                         </td>
                                         <td>
-                                            <a href="{.//tei:head/tei:note[@type='facs']/tei:ref/@target}" target="blank" title="opens in a new tab">  
+                                            <xsl:if test=".//tei:head/tei:note[@type='facs']">
+                                                <a href="{.//tei:head/tei:note[@type='facs']/tei:ref/@target}" target="blank" title="opens in a new tab">  
                                                 
                                                 <i class="bi bi-box-arrow-up-right"/>
-                                            </a>
+                                            </a></xsl:if>
                                         </td>
                                     </tr>
                                 </xsl:for-each>
