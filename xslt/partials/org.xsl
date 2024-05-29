@@ -7,23 +7,34 @@
     <xsl:template match="tei:org" name="org_detail">
         <table class="table entity-table">
             <tbody>
-                <xsl:if test="./tei:orgName">
+                <xsl:if test="./tei:orgName[@type='alt']">
                     <tr>
                         <th>
-                            Name
+                            Lateinischer Name
                         </th>
                         <td>
-                            <xsl:value-of select="./tei:orgName"/>
+                            <xsl:value-of select="./tei:orgName[@type='alt']"/>
                         </td>
                     </tr>
                 </xsl:if>
-                <xsl:if test="./tei:desc">
+                <xsl:if test="./tei:placeName">
                     <tr>
                         <th>
-                            Beschreibung
+                            Ort
                         </th>
                         <td>
-                            <xsl:value-of select="./tei:desc"/>
+                            <xsl:for-each select="./tei:placeName">
+                                <xsl:variable name="place_id">
+                                    <xsl:value-of select="data(@xml:id)"/>
+                                </xsl:variable>
+                                <a>
+                                    <xsl:attribute name="href">
+                                        <xsl:value-of select="concat($place_id, '.html')"/>
+                                    </xsl:attribute>
+                                    <xsl:value-of select="./tei:placeName"/>
+                                 </a>
+                            </xsl:for-each>
+                            
                         </td>
                     </tr>
                 </xsl:if>

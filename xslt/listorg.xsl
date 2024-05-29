@@ -36,7 +36,8 @@
                                     <tr>
                                         <th scope="col" width="20" tabulator-formatter="html" tabulator-headerSort="false" tabulator-download="false">#</th>
                                         <th scope="col" tabulator-headerFilter="input">Name</th>
-                                        <th scope="col" tabulator-headerFilter="input">ID</th>
+                                        <th scope="col" tabulator-headerFilter="input">Lateinischer Name</th>
+                                        <th scope="col" tabulator-headerFilter="input">Ort</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -54,10 +55,29 @@
                                                 </a>
                                             </td>
                                             <td>
-                                                <xsl:value-of select=".//tei:orgName[1]/text()"/>
+                                                <a>
+                                                    <xsl:attribute name="href">
+                                                        <xsl:value-of select="concat($id, '.html')"/>
+                                                    </xsl:attribute>
+                                                    <xsl:value-of select=".//tei:orgName[1]/text()"/>
+                                                </a>                                                
                                             </td>
                                             <td>
-                                                <xsl:value-of select="$id"/>
+                                                <xsl:value-of select=".//tei:orgName[@type='alt']/text()"/>
+                                            </td>
+                                            <td>
+                                                <xsl:for-each select=".//tei:placeName">
+                                                    <xsl:variable name="place_key">
+                                                        <xsl:value-of select="data(@key)"/>
+                                                    </xsl:variable>
+                                                    <a>
+                                                        <xsl:attribute name="href">
+                                                            <xsl:value-of select="concat($place_key, '.html')"/>
+                                                        </xsl:attribute>
+                                                        <xsl:value-of select=".//tei:placeName/text()"/>
+                                                    </a>
+                                                </xsl:for-each>
+                                                
                                             </td>
                                         </tr>
                                     </xsl:for-each>
