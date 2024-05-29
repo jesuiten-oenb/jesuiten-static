@@ -28,7 +28,7 @@
                             </li>
 
                             <li class="nav-item">
-                                <a class="nav-link" href="toc.html">Editionseinheiten</a>
+                                <a class="nav-link" href="toc.html">Handschriften</a>
                             </li>
 
                             <li class="nav-item dropdown disabled">
