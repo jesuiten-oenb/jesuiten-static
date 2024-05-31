@@ -71,7 +71,7 @@
                                         <td>
                                             <xsl:value-of
                                                 select=".//tei:head/tei:title[1]/text()"/>
-                                            />
+                                            
                                         </td>
                                         <td>
                                             <xsl:value-of
