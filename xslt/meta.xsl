@@ -19,6 +19,25 @@
                 <xsl:call-template name="html_head">
                     <xsl:with-param name="html_title" select="$doc_title"></xsl:with-param>
                 </xsl:call-template>
+                <style>
+                    .container {
+                    max-width: 1000px;                    
+                    padding: 20px;}
+                    h1 {
+                    font-size: 2em;
+                    margin-bottom: 0.5em;
+                    }
+                    
+                    h2 {
+                    font-size: 1.5em;
+                    margin-bottom: 1em;
+                    }
+                    
+                    figure {
+                    margin: 0 0 1em 1em;
+                    max-width: 80%;
+                    }
+                </style>
             </head>
             
             <body class="d-flex flex-column h-100">
@@ -69,6 +88,19 @@
                 <xsl:apply-templates/>
             </xsl:otherwise>
         </xsl:choose>
+    </xsl:template>
+    <xsl:template match="tei:listBibl">
+        <div>
+            <h3><xsl:value-of select="tei:listBibl/tei:head/text()"/></h3>
+            <ul>
+                <xsl:apply-templates/>
+            </ul>
+        </div>
+        
+    </xsl:template>
+    <xsl:template match="tei:bibl">
+        <li><xsl:value-of select="."/>
+            <xsl:apply-templates/></li>
     </xsl:template>
 
 

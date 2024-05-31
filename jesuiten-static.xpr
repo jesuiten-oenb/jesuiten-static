@@ -14,7 +14,7 @@
                                 </field>
                                 <field name="scenarioIds">
                                     <list>
-                                        <String>index</String>
+                                        <String>meta</String>
                                     </list>
                                 </field>
                                 <field name="scenarioTypes">
