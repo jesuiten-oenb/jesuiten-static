@@ -21,6 +21,84 @@
                 <xsl:call-template name="html_head">
                     <xsl:with-param name="html_title" select="$doc_title"></xsl:with-param>
                 </xsl:call-template>
+                <style>
+                    <!--body {
+                    font-family: Arial, sans-serif;
+                    line-height: 1.6;
+                    margin: 0;
+                    padding: 0;
+                    background-color: #f8f9fa;
+                    color: #212529;
+                    }
+                    
+                    main {
+                    padding: 20px;
+                    }-->
+                    
+                    .container {
+                    max-width: 1000px;
+                    margin: 0 auto;
+                    padding: 20px;
+                    background-color: #ffffff;
+                    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+                    }
+                    
+                    h1 {
+                    font-size: 2em;
+                    margin-bottom: 0.5em;
+                    }
+                    
+                    h2 {
+                    font-size: 1.5em;
+                    margin-bottom: 1em;
+                    color: #6c757d;
+                    }
+                    
+                    figure {
+                    margin: 0 0 1em 1em;
+                    max-width: fit-content;
+                    }
+                    
+                    img {
+                    max-width: 100%;
+                    height: auto;
+                    object-fit: contain;
+                    }
+                    
+                    .figure-caption {
+                    font-size: 0.9em;
+                    color: #6c757d;
+                    text-align: right;
+                    }
+                    
+                    p {
+                    margin: 1em 0;
+                    }
+                    
+                    p ul {
+                    list-style-type: disc;
+                    margin: 1em 0 1em 20px;
+                    padding: 0;
+                    }
+                    
+                    p a {
+                    color: #007bff;
+                    text-decoration: none;
+                    }
+                    
+                    p a:hover {
+                    text-decoration: underline;
+                    }
+                    
+                    @media (max-width: 768px) {
+                    figure {
+                    float: none;
+                    margin: 0 0 1em 0;
+                    max-width: 100%;
+                    }
+                    }
+                    
+                </style>
             </head>            
             <body class="d-flex flex-column h-100">
                 <xsl:call-template name="nav_bar"/>
@@ -28,6 +106,20 @@
                     <div class="container">
                         <h1><xsl:value-of select="$project_short_title"/></h1>
                         <h2><xsl:value-of select="$project_title"/></h2>
+                        <div>
+                            
+                            <p>Willkommen auf der Website des Projekts zu den Litterae Annuae der <a href="https://www.onb.ac.at/">Österreichischen Nationalbibliothek</a>. Diese Plattform bietet einfachen Zugang zu den im Rahmen des Projekts generierten Daten: 
+                              <ul>
+                                <li><a href="toc.html">Handschriftenbeschreibungen</a></li>
+                                <li><a href="listplace.html">Ortsregister</a></li>
+                                <li><a href="listorg.html">Institutionsregister</a></li>
+                            </ul>sowie Links zu den Digitalisaten. Eine kurze Projektbeschreibung finden Sie unter <a href="about.html">'Über das Projekt'</a>.
+                            </p>
+                        </div>
+                        <figure>
+                            <img src="images/karte.jpg"/>
+                            <figcaption class="figure-caption text-end">Johann Baptist Mayr, <i>Provincia Austriaca Societatis Iesu</i> (Augsburg ca. 1746) - <a href="http://data.onb.ac.at/rec/AC11183479">ÖNB, K I 133647</a></figcaption>
+                        </figure>                
                     </div>
                 </main>
                 <xsl:call-template name="html_footer"/>
