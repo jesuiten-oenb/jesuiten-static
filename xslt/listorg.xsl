@@ -35,9 +35,9 @@
                                 <thead>
                                     <tr>
                                         <th scope="col" width="20" tabulator-formatter="html" tabulator-headerSort="false" tabulator-download="false">#</th>
-                                        <th scope="col" tabulator-headerFilter="input">Name</th>
+                                        <th scope="col" tabulator-formatter="html" tabulator-headerFilter="input">Name</th>
                                         <th scope="col" tabulator-headerFilter="input">Lateinischer Name</th>
-                                        <th scope="col" tabulator-headerFilter="input">Ort</th>
+                                        <th scope="col" tabulator-formatter="html" tabulator-headerFilter="input">Ort</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -74,7 +74,7 @@
                                                         <xsl:attribute name="href">
                                                             <xsl:value-of select="concat($place_key, '.html')"/>
                                                         </xsl:attribute>
-                                                        <xsl:value-of select=".//tei:placeName/text()"/>
+                                                        <xsl:value-of select="."/>
                                                     </a>
                                                 </xsl:for-each>
                                                 
