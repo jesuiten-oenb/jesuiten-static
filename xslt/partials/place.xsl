@@ -6,21 +6,19 @@
     <xsl:template match="tei:place" name="place_detail">
         <table class="table entity-table">
             <tbody>
-                <tr>
-                    <th>
-                        Ortsname
-                    </th>
-                    <td>
-                        <xsl:choose>
-                            <xsl:when test="./tei:settlement/tei:placeName">
-                                <xsl:value-of select="./tei:settlement/tei:placeName"/>
-                            </xsl:when>
-                            <xsl:otherwise>
-                                <xsl:value-of select="./tei:placeName"/>
-                            </xsl:otherwise>
-                        </xsl:choose>
-                    </td>
-                </tr>
+                <xsl:if test="./tei:placeName[@type='alt']">
+                    <tr>
+                        <th>
+                            Alternative Namen
+                        </th>
+                        <td>
+                            <xsl:for-each select="./tei:placeName[@type='alt']">
+                                <xsl:value-of select="."/>
+                                <xsl:if test="position() != last()"> | </xsl:if>
+                            </xsl:for-each>
+                        </td>
+                    </tr>
+                </xsl:if>
                 <xsl:if test="./tei:location[@type='located_in_place']">
                     <tr>
                         <th>
@@ -61,26 +59,26 @@
                     </td>
                 </tr>
                 </xsl:if>
-                <xsl:if test="./tei:idno[@type='GEONAMES']">
+                <xsl:if test="./tei:idno[@type='geonames']">
                 <tr>
                     <th>
                         Geonames ID
                     </th>
                     <td>
-                        <a href="{./tei:idno[@type='GEONAMES']}" target="_blank">
-                            <xsl:value-of select="tokenize(./tei:idno[@type='GEONAMES'], '/')[4]"/>
+                        <a href="{./tei:idno[@type='geonames']}" target="_blank">
+                            <xsl:value-of select="tokenize(./tei:idno[@type='geonames'], '/')[4]"/>
                         </a>
                     </td>
                 </tr>
                 </xsl:if>
-                <xsl:if test="./tei:idno[@type='WIKIDATA']">
+                <xsl:if test="./tei:idno[@type='wikidata']">
                 <tr>
                     <th>
                         Wikidata ID
                     </th>
                     <td>
-                        <a href="{./tei:idno[@type='WIKIDATA']}" target="_blank">
-                            <xsl:value-of select="tokenize(./tei:idno[@type='WIKIDATA'], '/')[last()]"/>
+                        <a href="{./tei:idno[@type='wikidata']}" target="_blank">
+                            <xsl:value-of select="tokenize(./tei:idno[@type='wikidata'], '/')[last()]"/>
                         </a>
                     </td>
                 </tr>
