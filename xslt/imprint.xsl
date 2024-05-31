@@ -27,15 +27,42 @@
                 <main class="flex-shrink-0">
                     <div class="container">
                         <h1><xsl:value-of select="$doc_title"/></h1>
-                        <xsl:for-each select=".//div">
-                            <xsl:copy>
-                                <xsl:copy-of select="."/>
-                            </xsl:copy>
-                        </xsl:for-each>                          
+                        <xsl:apply-templates select=".//tei:body"></xsl:apply-templates>
+                                             
                     </div>
                 </main>
                 <xsl:call-template name="html_footer"/>
             </body>
         </html>
+    </xsl:template>
+    <xsl:template match="tei:p">
+        <p id="{generate-id()}"><xsl:apply-templates/></p>
+    </xsl:template>
+    <xsl:template match="tei:div">
+        <div id="{generate-id()}"><xsl:apply-templates/></div>
+    </xsl:template>
+    <xsl:template match="tei:head">
+        <h2><xsl:apply-templates/></h2>
+    </xsl:template>
+    <xsl:template match="tei:ref">
+        <xsl:choose>
+            <xsl:when test="starts-with(data(@target), 'http')">
+                <a>
+                    <xsl:attribute name="href"><xsl:value-of select="@target"/></xsl:attribute>
+                    <xsl:value-of select="."/>
+                </a>
+            </xsl:when>
+            <xsl:otherwise>
+                <xsl:apply-templates/>
+            </xsl:otherwise>
+        </xsl:choose>
+    </xsl:template>
+    <xsl:template match="tei:figure">
+        <div class="text-center">
+            <figure class="figure">
+                <img src="{tei:graphic/@url}" class="figure-img img-fluid rounded" alt=""/>
+                <figcaption class="figure-caption text-end"><xsl:value-of select="tei:figDesc"/></figcaption>
+            </figure>
+        </div>
     </xsl:template>
 </xsl:stylesheet>
